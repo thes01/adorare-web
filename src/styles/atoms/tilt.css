@@ -1,0 +1,15 @@
+.tilt-layer-base {
+    transform-style: preserve-3d;
+}
+
+.tilt-layer-1 {
+    transform: translateZ(0.5em)
+}
+
+.tilt-layer-2 {
+    transform: translateZ(1em)
+}
+
+.tilt-layer-3 {
+    transform: translateZ(1.5em)
+}
