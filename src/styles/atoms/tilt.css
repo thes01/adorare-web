@@ -1,15 +1,18 @@
+/* https://micku7zu.github.io/vanilla-tilt.js/ */
+
+/* works with data-tilt */
 .tilt-layer-base {
     transform-style: preserve-3d;
 }
 
 .tilt-layer-1 {
-    transform: translateZ(0.5em)
+    transform: translateZ(theme('spacing.2'))
 }
 
 .tilt-layer-2 {
-    transform: translateZ(1em)
+    transform: translateZ(theme('spacing.4'))
 }
 
 .tilt-layer-3 {
-    transform: translateZ(1.5em)
+    transform: translateZ(theme('spacing.6'))
 }

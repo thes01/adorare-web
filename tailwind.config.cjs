@@ -3,5 +3,8 @@ module.exports = {
     theme: {
         extend: {}
     },
-    plugins: []
+    plugins: [
+        // https://www.npmjs.com/package/tailwind-scrollbar
+        require('tailwind-scrollbar')
+    ]
 };
