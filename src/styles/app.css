@@ -37,3 +37,7 @@ body h2 {
 body p {
     @apply text-justify;
 }
+
+body ::selection {
+    @apply text-white bg-navy-blue;
+}
