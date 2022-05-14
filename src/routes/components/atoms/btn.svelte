@@ -2,6 +2,7 @@
     <button>
         <slot></slot>
     </button>
+    <!-- SVG is used for (hand)drawing the border -->
     <svg bind:this={svgElement}>
     </svg>
 </div>
@@ -15,18 +16,26 @@
     onMount(() => {
         let roughSvg = roughjs.svg(svgElement)
 
-        document.fonts.ready.then(() => {
-            const off = 5;
-            const w = svgElement.clientWidth
-            const h = svgElement.clientHeight
-    
-            const lines = [
+        const generateLines = (off, w, h) => ([
                 roughSvg.line(-off, 0, w + off, 0), // -----------
                 roughSvg.line(0, -off, 0, h + off), // |
                 roughSvg.line(w, -off, w, h + off), //           |
                 roughSvg.line(-off, h, w + off, h)  // -----------
-            ]
+            ])
+
+        document.fonts.ready.then(() => {
+            const off = 5; 
+            const w = svgElement.clientWidth
+            const h = svgElement.clientHeight
+    
+            var lines = generateLines(off, w, h)
             lines.forEach(line => svgElement.appendChild(line))
+
+            // window.setInterval(() => {
+            //     lines.forEach(line => svgElement.removeChild(line))
+            //     lines = generateLines(off, w, h)
+            //     lines.forEach(line => svgElement.appendChild(line))
+            // }, 200)
         })
     });
 </script>
@@ -49,7 +58,7 @@
     .btn-hand button {
         padding: 0.3rem 0.5rem;
         font-family: RetroSignature;
-        font-size: 3rem;
+        font-size: 3.5em;
         margin: -1rem 0.5rem;
     }
 
