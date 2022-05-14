@@ -1,9 +1,15 @@
 <Layout>
-    <NavBar></NavBar>
+    <!-- <NavBar></NavBar> -->
 
     <div class="container mx-auto">
-        <div class="flex w-100 justify-center mb-32">
+        <div class="flex w-100 justify-center">
             <MainLogo></MainLogo>
+        </div>
+
+        <div class="flex w-100 justify-center mb-44">
+            <Button>objednávka</Button>
+            <Button>kontakt</Button>
+            <Button>noty</Button>
         </div>
 
         <div class="w-100">
@@ -26,6 +32,8 @@
     import Layout from './__layout.svelte'
     import MainLogo from './components/organisms/MainLogo.svelte'
     import NavBar from './components/organisms/NavBar.svelte'
+
+    import Button from './components/atoms/btn.svelte'
 
     import "vanilla-tilt"
 </script>
