@@ -1,3 +1,4 @@
 node_modules
 .vscode
 .svelte-kit
+*:Zone.Identifier
