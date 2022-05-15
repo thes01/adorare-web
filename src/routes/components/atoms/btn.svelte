@@ -1,9 +1,11 @@
-<div class="btn-hand">
-    <button>
+<div class="relative inline-flex bg-transparent text-black duration-100 mx-2
+    hover:bg-navy-blue hover:text-white">
+    <button class="font-retro py-1 px-2 -my-4 mx-2">
         <slot></slot>
     </button>
     <!-- SVG is used for (hand)drawing the border -->
-    <svg bind:this={svgElement}>
+    <svg class="absolute w-full h-full overflow-visible -z-10
+            opacity-0 duration-300 delay-300" bind:this={svgElement}>
     </svg>
 </div>
 
@@ -31,6 +33,8 @@
             var lines = generateLines(off, w, h)
             lines.forEach(line => svgElement.appendChild(line))
 
+            svgElement.classList.remove('opacity-0')
+
             // window.setInterval(() => {
             //     lines.forEach(line => svgElement.removeChild(line))
             //     lines = generateLines(off, w, h)
@@ -39,34 +43,3 @@
         })
     });
 </script>
-
-<style>
-    .btn-hand {
-        position: relative;
-        display: inline-flex;
-        margin: 0 0.5rem;
-        background-color: transparent;
-        color: black;
-        transition: 100ms;
-    }
-
-    .btn-hand:hover {
-        background-color: #1c354b; /* navy blue */
-        color: white;
-    }
-
-    .btn-hand button {
-        padding: 0.3rem 0.5rem;
-        font-family: RetroSignature;
-        font-size: 3.5em;
-        margin: -1rem 0.5rem;
-    }
-
-    .btn-hand svg {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        overflow: visible;
-        z-index: -1;
-    }
-</style>

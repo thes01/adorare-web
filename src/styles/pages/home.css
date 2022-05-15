@@ -1,0 +1,21 @@
+.kanka-1:before {
+    background: url(/design/kanka_nadpis.png);
+    content: "";
+    width: 400px;
+    height: 400px;
+    display: block;
+    position: absolute;
+    background-size: contain;
+    transform: translate(-100px,-180px) rotate(24deg);
+    z-index: -1;
+}
+
+.skvrny-back-1 {
+    background: url(/design/skvrny_back_1.jpg);
+    position: absolute;
+    left: 0;
+    background-size: contain;
+    width: 600px;
+    height: 1000px;
+    z-index: -1;
+}

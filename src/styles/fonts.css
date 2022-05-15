@@ -1,0 +1,9 @@
+@font-face {
+    font-family: RetroSignature;
+    src: url(/fonts/RetroSignature.woff2), url(/fonts/RetroSignature.woff);
+}
+
+body h2, .font-retro {
+    font-family: RetroSignature;
+    font-size: 4em;
+}
