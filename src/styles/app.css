@@ -4,7 +4,7 @@
 
 @font-face {
     font-family: RetroSignature;
-    src: url(static/fonts/RetroSignature.woff2), url(static/fonts/RetroSignature.woff);
+    src: url(/fonts/RetroSignature.woff2), url(/fonts/RetroSignature.woff);
 }
 
 body h2 {
@@ -13,7 +13,7 @@ body h2 {
 }
 
 .kanka-1:before {
-    background: url(static/design/kanka_nadpis.png);
+    background: url(/design/kanka_nadpis.png);
     content: "";
     width: 400px;
     height: 400px;
@@ -25,7 +25,7 @@ body h2 {
 }
 
 .skvrny-back-1 {
-    background: url(static/design/skvrny_back_1.jpg);
+    background: url(/design/skvrny_back_1.jpg);
     position: absolute;
     left: 0;
     background-size: contain;
