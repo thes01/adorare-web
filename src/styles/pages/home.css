@@ -13,7 +13,7 @@
 .skvrny-back-1 {
     background: url(/layout/skvrny_back_1.jpg);
     position: absolute;
-    left: 0;
+    right: 0;
     background-size: contain;
     width: 600px;
     height: 1000px;
