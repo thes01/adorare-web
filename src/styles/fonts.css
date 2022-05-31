@@ -7,3 +7,8 @@ body h2, .font-retro {
     font-family: RetroSignature;
     font-size: 4em;
 }
+
+body h3 {
+    font-family: RetroSignature;
+    font-size: 3em;
+}
