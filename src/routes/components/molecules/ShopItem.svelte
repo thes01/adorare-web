@@ -1,27 +1,29 @@
 <div class="flex items-center w-full -my-14">
-    <div class="h-32 overflow-visible">
+    <div class="h-32 overflow-visible shrink-0">
         <img src="{iconSrc}" alt="{iconAlt}" class="relative w-48 mr-6" style="top: {topOffset}px; left: {leftOffset}px;">
     </div>
-    <div class="grow">
+    <div class="grow shrink-0">
         <h3 class="mr-6"><slot></slot></h3>
     </div>
     {#if price}
         <div class="text-navy-blue opacity-60 text-center mr-4 pt-2">{price} Kč</div>
     {/if}
-    <div class="inline-flex pt-2">
-        {#if !unavailable}
-            <button on:click="{qtyHelper.sub}">-</button>
-            <span contenteditable 
-                class="input px-1 mx-2 border-none text-right focus:outline-navy-blue"
-                role="textbox"
-                bind:innerHTML="{qtyHelper.qtyStr}"
-                on:keypress="{digitPass}">
-            </span>
-            <span class="-ml-1 mr-2">ks</span>
-            <button on:click="{qtyHelper.add}">+</button>
-        {:else}
-            <a class="text-navy-blue opacity-60 no-underline hover:underline" href="{unavailableLink}">{unavailable}</a>
-        {/if}
+    <div>
+        <div class="inline-flex pt-2">
+            {#if !unavailable}
+                <button on:click="{qtyHelper.sub}">-</button>
+                <span contenteditable 
+                    class="input px-1 mx-2 border-none text-right focus:outline-navy-blue"
+                    role="textbox"
+                    bind:innerHTML="{qtyHelper.qtyStr}"
+                    on:keypress="{digitPass}">
+                </span>
+                <span class="-ml-1 mr-2">ks</span>
+                <button on:click="{qtyHelper.add}">+</button>
+            {:else}
+                <a class="text-navy-blue opacity-60 no-underline hover:underline" href="{unavailableLink}">{unavailable}</a>
+            {/if}
+        </div>
     </div>
 </div>
 

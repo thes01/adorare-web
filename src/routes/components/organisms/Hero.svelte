@@ -21,8 +21,23 @@
 }
 
 .sizing-box {
-    width: 800px;
-    height: 800px;
+    width: 70vw;
+    height: 70vw;    
+
+    @screen sm {
+        width: 380px;
+        height: 380px;
+    }
+
+    @screen md {
+        width: 600px;
+        height: 600px;
+    }
+
+    @screen lg {
+        width: 800px;
+        height: 800px;
+    }
 }
 
 .tilt-layer-1 { transform: translateZ(theme('spacing.1')); }

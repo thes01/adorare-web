@@ -1,5 +1,5 @@
 <div>
-    <div class="w-1/2 my-16">
+    <div class="xs:w-full xl:w-2/3 2xl:w-1/2 my-16">
         <ShopItem
             iconSrc="/shop/k-vodam.png"
             iconAlt="CD K vodám"
