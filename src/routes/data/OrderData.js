@@ -5,5 +5,6 @@ export default {
     address: '',
     psc: '',
     phone: '',
-    note: ''
+    note: '',
+    recaptcha_response: ''
 }

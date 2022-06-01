@@ -11,7 +11,7 @@
     <div>
         <div class="inline-flex pt-2">
             {#if !unavailable}
-                <button on:click="{qtyHelper.sub}">-</button>
+                <button on:click="{qtyHelper.sub}" class="select-none">-</button>
                 <span contenteditable 
                     class="input px-1 mx-2 border-none text-right focus:outline-navy-blue"
                     role="textbox"
@@ -19,7 +19,7 @@
                     on:keypress="{digitPass}">
                 </span>
                 <span class="-ml-1 mr-2">ks</span>
-                <button on:click="{qtyHelper.add}">+</button>
+                <button on:click="{qtyHelper.add}" class="select-none">+</button>
             {:else}
                 <a class="text-navy-blue opacity-60 no-underline hover:underline" href="{unavailableLink}">{unavailable}</a>
             {/if}

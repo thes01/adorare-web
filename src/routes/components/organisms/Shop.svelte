@@ -27,6 +27,9 @@
         <TextField bind:value={orderData.address}>Adresa (Ulice, č.p.):</TextField>
         <TextField bind:value={orderData.phone}>Telefon: </TextField>
 
+        {#if shirtsCount > 0}
+            <p>Přidejte prosím do objednávky konkrétní velikosti (XS, S, M, L, XL, XXL) pro {shirtsCase[0]} {shirtsCount} {shirtsCase[1]} 🙏🏻.</p>
+        {/if}
         <TextField bind:value={orderData.note} type="textarea">Poznámka: </TextField>
 
         <ReCaptchaField bind:value={orderData.recaptcha_response}></ReCaptchaField>
@@ -46,6 +49,15 @@
 
     $: orderItems = orderItemsData
     $: orderData = orderDataDefault
-
-    $: totalPrice = orderItems.map(item => (item.price || 0) * (item.qty || 0)).reduce((a,b) => a + b)
+    
+    const sum = (a, b) => a + b
+    $: totalPrice = orderItems.map(item => (item.price || 0) * (item.qty || 0)).reduce(sum)
+    $: shirtsCount = orderItems
+        .filter(item => ['t_shirt'].includes(item.id))
+        .map(item => item.qty)
+        .reduce(sum)
+    $: shirtsCase = shirtsCount == 1 ? ['vaše','objednané tričko'] : (
+        (shirtsCount >= 2 && shirtsCount <= 4) ? ['všechna vaše', 'objednaná trička'] :
+        ['všech vašich', 'objednaných triček']
+    )
 </script>

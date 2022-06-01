@@ -39,10 +39,20 @@ export default [
         id: 'cd_1',
         name: 'Voláme k Tobě',
         type: 'CD',
-        iconSrc: '/shop/v-otazkach.png',
-        iconTopOffset: -2,
+        iconSrc: '/shop/volame-k-tobe.png',
+        iconTopOffset: 10,
         iconLeftOffset: 7,
         qty: 0,
         unavailable: 'volně ke stažení'
+    },
+    {
+        id: 't_shirt',
+        name: 'Tričko',
+        type: '',
+        iconSrc: '/shop/merch-tricko.png',
+        price: 250,
+        // iconTopOffset: -2,
+        iconLeftOffset: 24,
+        qty: 0,
     },
 ]
