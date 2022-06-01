@@ -1,23 +1,43 @@
 <div>
-    <div class="xs:w-full xl:w-2/3 2xl:w-1/2 my-16">        
-        {#each orderItems as item}
-            <ShopItem
-                unavailable="{item.unavailable}"
-                iconSrc="{item.iconSrc}"
-                iconAlt={`${item.type} ${item.name}`}
-                topOffset={item.iconTopOffset}
-                leftOffset={item.iconLeftOffset || 0}
-                price={item.price}
-                bind:qty={item.qty}>
-                {item.name}
-            </ShopItem>
-        {/each}
+    <div class="flex flex-wrap shop-items">
+        <div class="xs:w-full xl:w-2/3 2xl:w-1/2 my-16">        
+            {#each orderItems.filter(item => ['CD', 'Zpěvník'].includes(item.type)) as item}
+                <ShopItem
+                    unavailable="{item.unavailable}"
+                    iconSrc="{item.iconSrc}"
+                    iconAlt={`${item.type} ${item.name}`}
+                    topOffset={item.iconTopOffset}
+                    leftOffset={item.iconLeftOffset || 0}
+                    price={item.price}
+                    bind:qty={item.qty}>
+                    {item.name}
+                </ShopItem>
+            {/each}
+        </div>
+        <div class="xs:w-full xl:w-2/3 2xl:w-1/2">   
+            <div class="my-16">
+                {#each orderItems.filter(item => ['Merch'].includes(item.type)) as item}
+                    <ShopItem
+                        unavailable="{item.unavailable}"
+                        iconSrc="{item.iconSrc}"
+                        iconAlt={`${item.type} ${item.name}`}
+                        topOffset={item.iconTopOffset}
+                        leftOffset={item.iconLeftOffset || 0}
+                        price={item.price}
+                        bind:qty={item.qty}>
+                        {item.name}
+                    </ShopItem>
+                {/each}
+            </div>   
+            <div class="pl-16">
+                <p class="text-navy-blue opacity-60">Celková cena: {totalPrice} Kč</p>
+                <Button>Pokračovat v objednávce</Button>
+            </div>  
+        </div>
+        
     </div>
-
-    <Button>Pokračovat v objednávce</Button>
-
     <div>
-        <p>Celková cena: {totalPrice} Kč</p>
+        <h3>Objednávka</h3>
 
         <p>Sdělte nám prosím vaše kontaktní informace, ať víme, kam objednávku poslat.</p>
         <TextField bind:value={orderData.name}>Jméno a příjmení:</TextField>
@@ -56,8 +76,10 @@
         .filter(item => ['t_shirt'].includes(item.id))
         .map(item => item.qty)
         .reduce(sum)
+    // české skloňování podle počtu triček..
     $: shirtsCase = shirtsCount == 1 ? ['vaše','objednané tričko'] : (
         (shirtsCount >= 2 && shirtsCount <= 4) ? ['všechna vaše', 'objednaná trička'] :
         ['všech vašich', 'objednaných triček']
     )
+
 </script>

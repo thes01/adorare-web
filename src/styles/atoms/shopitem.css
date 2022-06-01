@@ -1,0 +1,25 @@
+.shop-items {
+    @media screen and (min-width: 400px) {
+        @apply -mx-20;
+    }
+}
+
+.shop-item-icon {
+    display: none;
+
+    @media screen and (min-width: 400px) {
+        display: block;
+        max-width: 135px;
+        margin-right: 10px;
+    }
+
+    @screen sm {
+        max-width: none;
+        margin-right: 0;
+    }
+}
+
+.shop-item-input { 
+    min-width: 1rem;
+    width: auto;
+}

@@ -1,13 +1,15 @@
 .kanka-1:before {
-    background: url(/layout/kanka_nadpis.png);
-    content: "";
-    width: 400px;
-    height: 400px;
-    display: block;
-    position: absolute;
-    background-size: contain;
-    transform: translate(-100px,-180px) rotate(24deg);
-    z-index: -1;
+    @screen md {
+        background: url(/layout/kanka_nadpis.png);
+        content: "";
+        width: 400px;
+        height: 400px;
+        display: block;
+        position: absolute;
+        background-size: contain;
+        transform: translate(-100px,-180px) rotate(24deg);
+        z-index: -1;
+    }
 }
 
 .skvrny-back-1 {
@@ -18,4 +20,9 @@
     width: 600px;
     height: 1000px;
     z-index: -1;
+
+    opacity: 0.2;
+    @screen lg {
+        opacity: 1;
+    }
 }

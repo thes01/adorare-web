@@ -9,11 +9,11 @@ module.exports = {
         },
         container: {
             padding: {
-              DEFAULT: '6rem',
-              sm: '8rem',
+              DEFAULT: '3rem',
+              sm: '4rem',
               md: '4rem',
-              lg: '12rem'
-            //   xl: '5rem',
+              lg: '8rem',
+              xl: '12rem',
             //   '2xl': '6rem',
             },
         }, 
