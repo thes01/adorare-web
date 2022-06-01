@@ -12,3 +12,7 @@ body h3 {
     font-family: RetroSignature;
     font-size: 3em;
 }
+
+.font-work-sans {
+    font-family: 'Work Sans', sans-serif;
+}
