@@ -4,6 +4,7 @@
 
 @import "./fonts.css";
 @import "./pages/home.css";
+@import "./atoms/recaptcha.css";
 
 
 body p {

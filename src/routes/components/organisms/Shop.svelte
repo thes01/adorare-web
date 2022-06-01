@@ -28,6 +28,8 @@
         <TextField bind:value={orderData.phone}>Telefon: </TextField>
 
         <TextField bind:value={orderData.note} type="textarea">Poznámka: </TextField>
+
+        <ReCaptchaField bind:value={orderData.recaptcha_response}></ReCaptchaField>
     </div>
 
     <!-- todo: add Splide or some other carousely-thing for images -->
@@ -38,6 +40,7 @@
     import ShopItem from '../molecules/ShopItem.svelte'
     import Button from '../atoms/Button.svelte'
     import TextField from '../atoms/TextField.svelte'
+    import ReCaptchaField from '../atoms/ReCaptcha.svelte';
     import orderItemsData from '../../data/OrderItems'
     import orderDataDefault from '../../data/OrderData'
 
