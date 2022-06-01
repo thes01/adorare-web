@@ -6,5 +6,6 @@ export default {
     psc: '',
     phone: '',
     note: '',
+    note_sizes: '',
     recaptcha_response: ''
 }
