@@ -1,9 +1,9 @@
 <div data-tilt class="tilt-layer-base sizing-box flex justify-center items-center">
     <img src="/hero/3.min.png" alt="" class="tilt-layer-1 sizing-box">
-    <img src="/hero/2.min.png" alt="" class="tilt-layer-2 sizing-box">
-    <img src="/hero/4.min.png" alt="" class="tilt-layer-3 sizing-box">
-    <img src="/hero/5.min.png" alt="" class="tilt-layer-3 sizing-box">
+    <img src="/hero/2.min.png" alt="" class="tilt-layer-3 sizing-box">
+    <img src="/hero/4.min.png" alt="" class="tilt-layer-4 sizing-box">
     <img src="/hero/7.min.png" alt="" class="tilt-layer-4 sizing-box">
+    <img src="/hero/5.min.png" alt="" class="tilt-layer-4 sizing-box">
     <img src="/hero/1.min.png" alt="" class="tilt-layer-5 sizing-box">
     <img src="/adologo_newgen.svg" alt="" class="tilt-layer-6 w-2/5">
 </div>
@@ -21,8 +21,8 @@
 }
 
 .sizing-box {
-    width: 70vw;
-    height: 70vw;    
+    width: 100vw;
+    height: 100vw;    
 
     @screen sm {
         width: 380px;
@@ -40,10 +40,14 @@
     }
 }
 
+.sizing-box img {
+    max-width: unset;
+}
+
 .tilt-layer-1 { transform: translateZ(theme('spacing.1')); }
 .tilt-layer-2 { transform: translateZ(theme('spacing.2')); }
-.tilt-layer-3 { transform: translateZ(theme('spacing.4')); }
-.tilt-layer-4 { transform: translateZ(theme('spacing.6')); }
-.tilt-layer-5 { transform: translateZ(theme('spacing.8')); }
-.tilt-layer-6 { transform: translateZ(theme('spacing.10')); }
+.tilt-layer-3 { transform: translateZ(theme('spacing.6')); }
+.tilt-layer-4 { transform: translateZ(theme('spacing.8')); }
+.tilt-layer-5 { transform: translateZ(theme('spacing.12')); }
+.tilt-layer-6 { transform: translateZ(theme('spacing.14')); }
 </style>
