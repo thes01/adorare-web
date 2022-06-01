@@ -1,6 +1,6 @@
 <div class="flex items-center w-full -my-14">
     <div class="h-32 shrink-0 shop-item-icon overflow-hidden">
-        <img src="{iconSrc}" alt="{iconAlt}" class="relative w-48 mr-6 max-w-none" style="top: {topOffset}px; left: {leftOffset}px;">
+        <img src="{iconSrc}" alt="{iconAlt}" class="relative w-48 mr-6 max-w-none select-none" style="top: {topOffset}px; left: {leftOffset}px;">
     </div>
     <div class="grow shrink-0">
         <h3 class="mr-6 my-6"><slot></slot></h3>
@@ -11,15 +11,7 @@
     <div>
         <div class="inline-flex pt-2">
             {#if !unavailable}
-                <button on:click="{qtyHelper.sub}" class="select-none">-</button>
-                <span contenteditable 
-                    class="shop-item-input px-1 mx-2 border-none text-right focus:outline-navy-blue"
-                    role="textbox"
-                    bind:innerHTML="{qtyHelper.qtyStr}"
-                    on:keypress="{digitPass}">
-                </span>
-                <span class="-ml-1 mr-2">ks</span>
-                <button on:click="{qtyHelper.add}" class="select-none">+</button>
+                <ShopItemQty bind:qty></ShopItemQty>
             {:else}
                 <a class="text-navy-blue opacity-60 no-underline hover:underline" href="{unavailableLink}">{unavailable}</a>
             {/if}
@@ -28,6 +20,8 @@
 </div>
 
 <script lang="ts">
+    import ShopItemQty from "../atoms/ShopItemQty.svelte";
+
     export let iconSrc: string;
     export let iconAlt: string;
     export let price: number|null = null;
@@ -36,27 +30,4 @@
     export let leftOffset: number = 0;
     export let unavailable: string = "";
     export let unavailableLink: string = "#";
-    
-    $: qtyHelper = {
-        get qtyStr() {
-            return `${qty}`
-        },
-        set qtyStr(val: string) {
-            qty = parseInt(val) || 0
-        },
-        add() {
-            qty += 1;
-        },
-        sub() {
-            qty = Math.max(0, qty - 1);
-        }
-    }
-
-    // pass only digits (and delete also)
-    const digitPass = (event) => {
-        const is_n = (/\d/.test(String.fromCharCode(event.which) ));
-        if (!is_n) {
-            event.preventDefault();
-        }
-    }
 </script>
