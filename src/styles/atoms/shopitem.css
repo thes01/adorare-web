@@ -1,15 +1,15 @@
 .shop-items {
-    @media screen and (min-width: 400px) {
-        @apply -mx-20;
-    }
+    @apply -mx-20;
+    /* @media screen and (min-width: 400px) {
+    } */
 }
 
 .shop-item-icon {
-    display: none;
+    /* display: none; */
+    max-width: 135px;
 
     @media screen and (min-width: 400px) {
-        display: block;
-        max-width: 135px;
+        /* display: block; */
         margin-right: 10px;
     }
 
