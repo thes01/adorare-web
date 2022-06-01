@@ -5,6 +5,7 @@
 @import "./fonts.css";
 @import "./pages/home.css";
 @import "./atoms/recaptcha.css";
+@import "./atoms/button.css";
 @import "./atoms/shopitem.css";
 
 

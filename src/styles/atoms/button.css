@@ -1,0 +1,8 @@
+/* fix */
+button[type='submit'] {
+    @apply bg-navy-blue;
+}
+
+button:disabled {
+    opacity: 0.4;
+}
