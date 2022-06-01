@@ -1,45 +1,33 @@
 <div>
-    <div class="xs:w-full xl:w-2/3 2xl:w-1/2 my-16">
-        <ShopItem
-            iconSrc="/shop/k-vodam.png"
-            iconAlt="CD K vodám"
-            bind:qty={orderQties.k_vodam}
-            price={250}
-            topOffset={17}>
-            K vodám
-        </ShopItem>
-        <ShopItem
-            iconSrc="/shop/new-generation.png"
-            iconAlt="CD New generation"
-            bind:qty={orderQties.new_generation}
-            price={200}
-            topOffset={-8}>
-            New generation
-        </ShopItem>
-        <ShopItem
-            iconSrc="/shop/nech-se-vest.png"
-            iconAlt="CD Nech se vést"
-            bind:qty={orderQties.nech_se_vest}
-            price={200}
-            topOffset={2}>
-            Nech se vést
-        </ShopItem>
-        <ShopItem
-            iconSrc="/shop/v-otazkach.png"
-            iconAlt="CD V otázkách"
-            bind:qty={orderQties.v_otazkach}
-            price={200}
-            topOffset={-2}>
-            V otázkách
-        </ShopItem>
-        <ShopItem
-            unavailable="volně ke stažení"
-            iconSrc="/shop/volame-k-tobe.png"
-            iconAlt="CD Voláme k Tobě"
-            topOffset={8}
-            leftOffset={7}>
-            Voláme k tobě
-        </ShopItem>
+    <div class="xs:w-full xl:w-2/3 2xl:w-1/2 my-16">        
+        {#each orderItems as item}
+            <ShopItem
+                unavailable="{item.unavailable}"
+                iconSrc="{item.iconSrc}"
+                iconAlt={`${item.type} ${item.name}`}
+                topOffset={item.iconTopOffset}
+                leftOffset={item.iconLeftOffset || 0}
+                price={item.price}
+                bind:qty={item.qty}>
+                {item.name}
+            </ShopItem>
+        {/each}
+    </div>
+
+    <Button>Pokračovat v objednávce</Button>
+
+    <div>
+        <p>Celková cena: {totalPrice} Kč</p>
+
+        <p>Sdělte nám prosím vaše kontaktní informace, ať víme, kam objednávku poslat.</p>
+        <TextField bind:value={orderData.name}>Jméno a příjmení:</TextField>
+        <TextField bind:value={orderData.email} type="email" placehold="nekdo@neco.cz">Email:</TextField>
+        <TextField bind:value={orderData.city}>Město:</TextField>
+        <TextField bind:value={orderData.psc}>PSČ:</TextField>
+        <TextField bind:value={orderData.address}>Adresa (Ulice, č.p.):</TextField>
+        <TextField bind:value={orderData.phone}>Telefon: </TextField>
+
+        <TextField bind:value={orderData.note} type="textarea">Poznámka: </TextField>
     </div>
 
     <!-- todo: add Splide or some other carousely-thing for images -->
@@ -48,11 +36,13 @@
 
 <script>
     import ShopItem from '../molecules/ShopItem.svelte'
+    import Button from '../atoms/Button.svelte'
+    import TextField from '../atoms/TextField.svelte'
+    import orderItemsData from '../../data/OrderItems'
+    import orderDataDefault from '../../data/OrderData'
 
-    $: orderQties = {
-        k_vodam: 0,
-        new_generation: 0,
-        nech_se_vest: 0,
-        v_otazkach: 0
-    }
+    $: orderItems = orderItemsData
+    $: orderData = orderDataDefault
+
+    $: totalPrice = orderItems.map(item => (item.price || 0) * (item.qty || 0)).reduce((a,b) => a + b)
 </script>
