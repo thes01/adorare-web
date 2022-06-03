@@ -113,37 +113,4 @@
     const sum = (a, b) => a + b
     $: totalPrice = orderItems.map(item => (item.price || 0) * (item.qty || 0)).reduce(sum)
     $: deliveryPrice = totalPrice === 0 ? 0 : 80
-
-
-    // ---------------------- FORM SUBMITTING -----------------------
-    import GdocApi from '../../helpers/gdocApi';
-
-    function prepareOrderItems() {
-       let obj = {}
-       orderItems.forEach(item => obj[item.id] = item.qty)
-       // add also shipment
-       obj.dobirka = 1
-       return obj
-    }
-
-    // submit form
-    async function submitForm(event) {
-        // event.preventDefault()
-
-        // console.log({orderItems: prepareOrderItems(), orderData})
-
-        // const resp = await GdocApi.submitOrderForm(prepareOrderItems(), orderData)
-        // console.log('form submitted')
-        // console.log(resp)
-        
-        // GdocApi.submitOrderForm(prepareOrderItems(), orderData).then((resp) => {
-        //     console.log('form submitted')
-        //     console.log(resp)
-        // }).catch(err => {
-        //     console.log('error during form submission')
-        //     if (import.meta.env.DEV) {
-        //         console.log(err)
-        //     }
-        // })
-    }
 </script>
