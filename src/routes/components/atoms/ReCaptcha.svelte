@@ -15,7 +15,7 @@
     <script src="https://www.google.com/recaptcha/api.js?onload=onRecaptchaLoad&render={sitekey}" async defer></script>
 </svelte:head>
 
-<input type="hidden" class="recaptchaResponse" bind:value={value}>
+<input type="hidden" class="recaptchaResponse" name="recaptcha-response" bind:value={value}>
 
 <script>
     const sitekey = import.meta.env.VITE_RECAPTCHA_SITE_KEY
