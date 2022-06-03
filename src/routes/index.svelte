@@ -25,11 +25,17 @@
 
                 
             <h2 class="text-right">Budeme rádi za podporu</h2>
-            <p>
+            <p class="mb-20">
                 Na potřebné vybavení a nástroje si nevyděláváme jinak než z dobrovolného vstupného a prodejem našich cédéček,
                 zpěvníků (a nově i merche), proto kdykoliv uvítáme váš finanční dar. Peníze nám můžete zaslat na účet <span class="font-monospace">1794872015/3030</span>.
                 Rovněž jsme a budeme dále vděční za vaše modlitby.
             </p>
+
+            <h2>Nový klip - Malířem nebe</h2>
+            <p class="mb-10">Tady jsme nahráli nové video</p>
+            <div class="flex justify-center">
+                <YouTube cls="youtube-malirem" src="https://www.youtube.com/embed/H4dKb_MfYwk" title="Youtube - Malířem nebe (Žalm 19)"/>
+            </div>
             
             <div class="skvrny-back-1"></div>
             <h2 class="mt-12">Adorare shop</h2>
@@ -46,6 +52,7 @@
     import Layout from './__layout.svelte'
     import Hero from './components/organisms/Hero.svelte'
     import NavBar from './components/organisms/NavBar.svelte'
+    import YouTube from './components/atoms/YouTube.svelte';
 
     import Button from './components/atoms/Button.svelte'
     import Shop from './components/organisms/Shop.svelte'
