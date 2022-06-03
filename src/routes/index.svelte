@@ -13,8 +13,8 @@
         </div> -->
 
         <div class="w-100">
-            <h2 class="kanka-1">Něco málo o nás</h2>
-            <p>
+            <h2 class="kanka-1">Něco málo o&nbsp;nás</h2>
+            <p class="mb-20">
                 Jsme křesťanská hudební skupina, která má svůj původ v obci Študlov na Valašskoklobucku.
                 Poprvé jsme pod názvem Adorare (tj. klanět se, chválit...), vystoupili v roce 2006 na hudebním
                 festivalu Hradní tóny. Jméno jsme si dali podle modlitby adorace, k níž jsme se v té době pravidelně
@@ -22,7 +22,14 @@
                 rozšiřovat křesťanský hudební repertoár, ale také svědčit o naší osobní víře. Také doprovázíme mše svaté,
                 různá setkání mládeže, vedeme večery chval a koncertujeme.
             <p>
-        
+
+                
+            <h2 class="text-right">Budeme rádi za podporu</h2>
+            <p>
+                Na potřebné vybavení a nástroje si nevyděláváme jinak než z dobrovolného vstupného a prodejem našich cédéček,
+                zpěvníků (a nově i merche), proto kdykoliv uvítáme váš finanční dar. Peníze nám můžete zaslat na účet <span class="font-monospace">1794872015/3030</span>.
+                Rovněž jsme a budeme dále vděční za vaše modlitby.
+            </p>
             
             <div class="skvrny-back-1"></div>
             <h2 class="mt-12">Adorare shop</h2>

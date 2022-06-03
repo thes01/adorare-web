@@ -6,12 +6,25 @@
     src: url(/fonts/RetroSignature.woff) format('woff');
 }
 
+@media screen and (max-width: 400px) {
+    body {
+        font-size: 14px;
+    }
+}
+
 body h2, .font-retro {
     font-family: RetroSignature;
     font-size: 4em;
+    line-height: 0.7em;
+    margin-bottom: 0.3em;
 }
 
 body h3 {
     font-family: RetroSignature;
     font-size: 3em;
+}
+
+.font-monospace {
+    font-family: monospace;
+    font-size: 1.2em;
 }
