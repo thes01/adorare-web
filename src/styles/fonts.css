@@ -1,6 +1,9 @@
+@import "./fontRetro.css";
+
 @font-face {
     font-family: RetroSignature;
-    src: url(/fonts/RetroSignature.woff2), url(/fonts/RetroSignature.woff);
+    /* for compatibility */
+    src: url(/fonts/RetroSignature.woff) format('woff');
 }
 
 body h2, .font-retro {
@@ -11,8 +14,4 @@ body h2, .font-retro {
 body h3 {
     font-family: RetroSignature;
     font-size: 3em;
-}
-
-.font-work-sans {
-    font-family: 'Work Sans', sans-serif;
 }
