@@ -11,7 +11,7 @@
     <div>
         <div class="inline-flex pt-2">
             {#if !unavailable}
-                <ShopItemQty bind:qty></ShopItemQty>
+                <ShopItemQty inputName={unavailable ? null : itemId} bind:qty></ShopItemQty>
             {:else}
                 <a class="text-navy-blue opacity-60 no-underline hover:underline" href="{unavailableLink}">{unavailable}</a>
             {/if}
@@ -22,6 +22,7 @@
 <script lang="ts">
     import ShopItemQty from "../atoms/ShopItemQty.svelte";
 
+    export let itemId: string;
     export let iconSrc: string;
     export let iconAlt: string;
     export let price: number|null = null;
