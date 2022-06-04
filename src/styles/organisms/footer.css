@@ -1,0 +1,5 @@
+footer {
+    background: url('/layout/footer.png');
+    background-size: cover;
+    min-height: 20em;
+}
