@@ -1,4 +1,7 @@
 <Layout>
+    <div class="mx-8 mt-4">
+        <img src="/adologo_dark.svg" alt="adorare" class="w-32">
+    </div>
     <!-- <NavBar></NavBar> -->
     <header class="flex justify-center">
         <Hero></Hero>
