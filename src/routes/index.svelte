@@ -29,7 +29,7 @@
             <h2 class="text-right">Budeme rádi za podporu</h2>
             <p class="mb-20">
                 Na potřebné vybavení a nástroje si nevyděláváme jinak než z dobrovolného vstupného a prodejem našich cédéček,
-                zpěvníků (a nově i merche), proto kdykoliv uvítáme váš finanční dar. Peníze nám můžete zaslat na účet <span class="font-monospace">1794872015/3030</span>.
+                zpěvníků (a nově i merche), proto kdykoliv uvítáme váš finanční dar. Peníze nám můžete zaslat na účet <span class="font-monospace">2113503842/2700</span>.
                 Rovněž jsme a budeme dále vděční za vaše modlitby.
             </p>
 
