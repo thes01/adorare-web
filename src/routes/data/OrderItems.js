@@ -79,10 +79,10 @@ export default [
         id: 'bag',
         name: 'Plátěnka',
         type: 'Merch',
-        iconSrc: '/shop/merch-tricko.png',
+        iconSrc: '/shop/merch-platenka.png',
         price: 200,
-        // iconTopOffset: -2,
-        iconLeftOffset: 24,
+        iconTopOffset: 17,
+        iconLeftOffset: 11,
         qty: 0,
     },
     {
