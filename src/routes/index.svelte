@@ -43,6 +43,8 @@
             <h2 class="mt-12">Adorare shop</h2>
             <Shop></Shop>
 
+            <Gallery></Gallery>
+
             <!-- <Members></Members> -->
     </main>
 
@@ -63,6 +65,7 @@
 
     import Button from './components/atoms/Button.svelte'
     import Shop from './components/organisms/Shop.svelte'
+    import Gallery from './components/organisms/Gallery.svelte';
 
     import "vanilla-tilt"
 </script>

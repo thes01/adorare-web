@@ -79,9 +79,6 @@
             </div>
         </div>
         {/if}
-        
-        <!-- todo: add Splide or some other carousely-thing for images -->
-        <!-- https://splidejs.com/integration/svelte-splide/ -->
     </div>
 </form>
 
