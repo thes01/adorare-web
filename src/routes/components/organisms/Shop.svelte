@@ -52,6 +52,8 @@
                     bind:resultString={propsResults.t_shirt}/>
                 <ShopItemPropsList items={orderItems.filter(item => item.id == 'bag')} item_id="bag" item_name="Plátěnka"
                     bind:resultString={propsResults.bag}/>
+                <ShopItemPropsList items={orderItems.filter(item => item.id == 'magnet')} item_id="magnet" item_name="Magnetka"
+                    bind:resultString={propsResults.magnet}/>
             </div> 
             <div class="xs:w-full md:w-1/2 md:order-first">
                 <h3>Osobní údaje</h3>
@@ -100,7 +102,8 @@
     // data for configuration of t-shirts' and bags' variants
     $: propsResults = {
         t_shirt: '',
-        bag: ''
+        bag: '',
+        magnet: ''
     }
     $: {
         orderData.note_sizes = Object.values(propsResults).join('\n')

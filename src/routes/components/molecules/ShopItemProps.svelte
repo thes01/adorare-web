@@ -1,5 +1,5 @@
 <div class="flex mb-2">
-    <span class="mr-2">{item_name} -</span>
+    <span class="mr-2" style="white-space: nowrap;">{item_name} -</span>
     {#each Object.entries(variants[type]) as [label, options]}
         <label for="">{label}: </label>
         <select 
@@ -23,15 +23,39 @@
         },
         'bag': {
             'Barva': ['bílá', 'modrá']
+        },
+        'magnet': {
+            'Nápis': [
+                'Všechno mé je tvé',
+                'Ty znáš ten správný čas',
+                'Nech ať amé srdce rytmem tančí',
+                'Měníš to, co nemožné se zdá',
+                'Milostí obklop duši mou',
+                'Vryl sis do dlaní mé jméno',
+                'Za úsvitu, při stmívání, provázej nás svým požehnáním',
+                'nebe k zemi sniž',
+                'Láska tvá je melodií',
+                'K vodám',
+                'Vracíš mi dech',
+                'Ve tvém náručí chci si odpočinout',
+                'Zítřek jsi stvořil pro mě',
+                'Adonai',
+                'Já ti naslouchám',
+                'Adorare'
+            ]
         }
     }
 
-    $: selected = type === 'bag' ? {
-        'Barva': 'bílá'
-    } : {
-        'Velikost': 'XS',
-        'Barva': 'bílé'
-    }
+    $: selected = {
+        'bag': { 'Barva': 'bílá' },
+        't_shirt': {
+            'Velikost': 'XS',
+            'Barva': 'bílé'
+        },
+        'magnet': {
+            'Nápis': 'Všechno mé je tvé'
+        }
+    }[type]
 
     export let result;
     $: {
