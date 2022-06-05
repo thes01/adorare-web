@@ -1,6 +1,6 @@
 <Layout>
     <div class="mx-8 mt-4">
-        <img src="/adologo_dark.svg" alt="adorare" class="w-32">
+        <!-- <img src="/adologo_dark.svg" alt="adorare" class="w-32"> -->
     </div>
     <!-- <NavBar></NavBar> -->
     <header class="flex justify-center">
@@ -34,7 +34,7 @@
             </p>
 
             <h2>Nové cd - K vodám</h2>
-            <p class="mb-10">Tady jsme nahráli nové video</p>
+            <p class="mb-10"></p>
             <div class="flex justify-center">
                 <YouTube cls="youtube-k-vodam" src="https://www.youtube.com/embed/VCNvYfCBYvg" title="Adorare - K vodám"/>
             </div>
@@ -42,8 +42,9 @@
             <div class="skvrny-back-1"></div>
             <h2 class="mt-12">Adorare shop</h2>
             <Shop></Shop>
+            <div class="mb-12"></div>
 
-            <Gallery></Gallery>
+            <Gallery imgItems={GalleryImages.ImageList}></Gallery>
 
             <!-- <Members></Members> -->
     </main>
@@ -66,6 +67,7 @@
     import Button from './components/atoms/Button.svelte'
     import Shop from './components/organisms/Shop.svelte'
     import Gallery from './components/organisms/Gallery.svelte';
+    import GalleryImages from './data/GalleryImages';
 
     import "vanilla-tilt"
 </script>
