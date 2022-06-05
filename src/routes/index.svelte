@@ -42,6 +42,8 @@
             <div class="skvrny-back-1"></div>
             <h2 class="mt-12">Adorare shop</h2>
             <Shop></Shop>
+
+            <!-- <Members></Members> -->
     </main>
 
     <Footer></Footer>
@@ -55,6 +57,7 @@
     import Layout from './__layout.svelte'
     import Hero from './components/organisms/Hero.svelte'
     import NavBar from './components/organisms/NavBar.svelte'
+    import Members from './components/organisms/Members.svelte';
     import Footer from './components/organisms/Footer.svelte';
     import YouTube from './components/atoms/YouTube.svelte';
 
