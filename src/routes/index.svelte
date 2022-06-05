@@ -33,10 +33,10 @@
                 Rovněž jsme a budeme dále vděční za vaše modlitby.
             </p>
 
-            <h2>Nový klip - Malířem nebe</h2>
+            <h2>Nové cd - K vodám</h2>
             <p class="mb-10">Tady jsme nahráli nové video</p>
             <div class="flex justify-center">
-                <YouTube cls="youtube-malirem" src="https://www.youtube.com/embed/H4dKb_MfYwk" title="Youtube - Malířem nebe (Žalm 19)"/>
+                <YouTube cls="youtube-k-vodam" src="https://www.youtube.com/embed/VCNvYfCBYvg" title="Adorare - K vodám"/>
             </div>
             
             <div class="skvrny-back-1"></div>

@@ -1,4 +1,4 @@
-export default {
+const prefilled = {
     name: 'Mira',
     email: 'a@a.cz',
     city: 'city',
@@ -9,3 +9,17 @@ export default {
     note_sizes: '',
     recaptcha_response: ''
 }
+
+const empty = {
+    name: '',
+    email: '',
+    city: '',
+    address: '',
+    psc: '',
+    phone: '',
+    note: '',
+    note_sizes: '',
+    recaptcha_response: ''
+}
+
+export default import.meta.env.DEV ? prefilled : empty
