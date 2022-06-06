@@ -15,7 +15,11 @@
                 {#if !unavailable}
                     <ShopItemQty inputName={unavailable ? null : itemId} bind:qty></ShopItemQty>
                 {:else}
-                    <a target="_blank" class="text-navy-blue sm:opacity-60 no-underline hover:underline" href="{unavailableLink}">{unavailable}</a>
+                    {#if unavailableLink.length > 0}
+                        <a target="_blank" class="text-navy-blue sm:opacity-60 no-underline hover:underline" href="{unavailableLink}">{unavailable}</a>
+                    {:else}
+                        <span class="text-navy-blue sm:opacity-60">{unavailable}</span>
+                    {/if}
                 {/if}
             </div>
         </div>
@@ -33,5 +37,5 @@
     export let topOffset: number = 0;
     export let leftOffset: number = 0;
     export let unavailable: string = "";
-    export let unavailableLink: string = "#";
+    export let unavailableLink: string = '';
 </script>
