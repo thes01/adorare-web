@@ -1,6 +1,6 @@
 <form method="POST" action="https://script.google.com/macros/s/AKfycbyXjrnYw1MjohVhDnw-88Acy2zfwokYsI3s2iqAZ3xE4VTy7AMzsGN3sIk32xHJPWVhPg/exec">
 <div>
-    <div class="flex flex-wrap shop-items">
+    <div class="flex flex-wrap -ml-20">
         <div class="xs:w-full xl:w-2/3 2xl:w-1/2 my-16">        
             {#each orderItems.filter(item => ['CD', 'Zpěvník'].includes(item.type)) as item}
                 <ShopItem
@@ -43,7 +43,8 @@
         
     </div>
     {#if showOrderDetails}
-        <div class="flex flex-wrap md:flex-nowrap">
+        <div class="flex flex-wrap md:flex-nowrap
+                    -mx-6 md:mx-0">
             <div class="xs:w-full md:w-1/2 md:order-last pl-2">
                 {#if anyItemsWithProps}
                     <h3>Výběr variant</h3>
