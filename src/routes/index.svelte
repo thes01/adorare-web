@@ -38,7 +38,7 @@
                 <!-- Nepopsatelnou podporou jsou pro nás vaše modlitby, díky kterým opravdu můžem cítit Boží požehnání do našeho díla.   -->
             </p>
 
-            <h2>Nové cd - K vodám</h2>
+            <h2 class="leading-none">Nové cd - K&nbsp;vodám</h2>
             <p class="mb-10">
                 V neděli 5. června 2022 ve Valašských Kloboukách jsme měli čest představit vám naše nejnovější CD autorských písní - <i>K vodám</i>.
                 Titulní písní se stala stejnojmenná píseň, která vyšla online jako singl, po boku animovaného klipu <a href="https://www.youtube.com/watch?v=H4dKb_MfYwk">Malířem nebe</a> ze stejného alba.
