@@ -4,13 +4,19 @@ class Img {
         this.base_url = 'https://res.cloudinary.com/adorare/image/upload/'
     }
 
-    get thumbUrl() {
-        const transformation = 'c_scale,q_65,w_1794'
-        return this.base_url + transformation + '/' + this.uri
+    transformedUrl(transformation = '') {
+        if (transformation.length > 0) {
+            transformation += '/'
+        }
+        return this.base_url + transformation + this.uri
     }
 
+    get thumbUrl() {
+        return this.transformedUrl('c_scale,q_45,w_1000')
+    }
+    
     get fullUrl() {
-        return this.base_url + '/' + this.uri
+        return this.transformedUrl('c_scale,q_85,w_1920')
     }
 }
 

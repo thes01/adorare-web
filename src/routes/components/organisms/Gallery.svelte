@@ -4,7 +4,7 @@
     {#each imgItems as imgItem}
         <SplideSlide>
             <a href={imgItem.fullUrl} class="glightbox" data-gallery={galleryName}>
-                <img src={imgItem.thumbUrl} alt="Fotka"/>
+                <img src={imgItem.thumbUrl} class="w-full" alt="Fotka"/>
             </a>
         </SplideSlide>
     {/each}
