@@ -1,5 +1,7 @@
 import adapter from '@sveltejs/adapter-auto';
+import adapterNode from '@sveltejs/adapter-node';
 import preprocess from 'svelte-preprocess';
+import 'dotenv/config'
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -8,7 +10,7 @@ const config = {
 	preprocess: preprocess(),
 
 	kit: {
-		adapter: adapter()
+		adapter: process.env.VITE_NODE === 'node' ? adapterNode() : adapter()
 	}
 };
 
