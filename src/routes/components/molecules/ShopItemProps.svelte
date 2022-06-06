@@ -18,11 +18,11 @@
 
     const variants = {
         't_shirt': {
-            'Velikost': ['XS','S','M','L','XL','XXL'],
-            'Barva': ['bílé', 'modré']
+            'Velikost': ['XS-M','L-XXL'],
+            'Barva': ['bílé', 'černé']
         },
         'bag': {
-            'Barva': ['bílá', 'modrá']
+            'Barva': ['přírodní', 'modrá']
         },
         'magnet': {
             'Nápis': [
@@ -47,9 +47,9 @@
     }
 
     $: selected = {
-        'bag': { 'Barva': 'bílá' },
+        'bag': { 'Barva': 'přírodní' },
         't_shirt': {
-            'Velikost': 'XS',
+            'Velikost': 'XS-M',
             'Barva': 'bílé'
         },
         'magnet': {
