@@ -33,14 +33,15 @@
                 Titulní písní se stala stejnojmenná píseň, která vyšla online jako singl, po boku animovaného klipu <a href="https://www.youtube.com/watch?v=H4dKb_MfYwk">Malířem nebe</a> ze stejného alba.
             </p>
             <div class="flex justify-center">
-                <YouTube cls="youtube-k-vodam" src="https://www.youtube.com/embed/VCNvYfCBYvg" title="Adorare - K vodám"/>
+                <YouTube cls="mobile-full" src="https://www.youtube.com/embed/VCNvYfCBYvg" title="Adorare - K vodám"/>
             </div>
             
             <div class="skvrny-back-1"></div>
             <h2 class="mt-12" id="shop">Adorare shop</h2>
             <Shop></Shop>
-            <div class="mb-12"></div>
-            <Gallery imgItems={GalleryImages.ImageList}></Gallery>
+            <div class="mt-6 mb-12 mobile-full">
+                <Gallery imgItems={GalleryImages.ImageList}></Gallery>
+            </div>
 
             <!-- <Members></Members> -->
     </main>
