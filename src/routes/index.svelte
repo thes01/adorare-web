@@ -41,6 +41,7 @@
             <Shop></Shop>
             <div class="mt-6 mb-12 mobile-full">
                 <Gallery imgItems={GalleryImages.ImageList}></Gallery>
+                <p><a target="_blank" href="https://eu.zonerama.com/KaterinaHolbova/Album/8480142?secret=6650xgJ2gIl7D7CtIjf39Bg0T">Všechny propagační fotky najdete zde</a></p>
             </div>
 
             <!-- <Members></Members> -->

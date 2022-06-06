@@ -6,6 +6,7 @@
                 <ShopItem
                     itemId={item.id}
                     unavailable="{item.unavailable}"
+                    unavailableLink={item.unavailableLink}
                     iconSrc="{item.iconSrc}"
                     iconAlt={`${item.type} ${item.name}`}
                     topOffset={item.iconTopOffset}
@@ -22,6 +23,7 @@
                     <ShopItem
                         itemId={item.id}
                         unavailable="{item.unavailable}"
+                        unavailableLink={item.unavailableLink}
                         iconSrc="{item.iconSrc}"
                         iconAlt={`${item.type} ${item.name}`}
                         topOffset={item.iconTopOffset}

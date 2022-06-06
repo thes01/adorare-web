@@ -43,7 +43,8 @@ export default [
         iconTopOffset: 10,
         iconLeftOffset: 7,
         qty: 0,
-        unavailable: 'volně ke stažení'
+        unavailable: 'volně ke stažení',
+        unavailableLink: 'https://mega.nz/file/A24wDDTR#dGLac-fatWdGVXgTCtBFdaTcsVOUrjC7vCFwhsmeQyg'
     },
     {
         id: 'zpevnik_1',

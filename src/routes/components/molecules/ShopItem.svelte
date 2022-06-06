@@ -15,7 +15,7 @@
                 {#if !unavailable}
                     <ShopItemQty inputName={unavailable ? null : itemId} bind:qty></ShopItemQty>
                 {:else}
-                    <a class="text-navy-blue sm:opacity-60 no-underline hover:underline" href="{unavailableLink}">{unavailable}</a>
+                    <a target="_blank" class="text-navy-blue sm:opacity-60 no-underline hover:underline" href="{unavailableLink}">{unavailable}</a>
                 {/if}
             </div>
         </div>
