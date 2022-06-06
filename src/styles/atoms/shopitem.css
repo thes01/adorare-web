@@ -4,9 +4,9 @@
 }
 
 .shop-item-icon {
-    max-width: 155px;
+    max-width: 160px;
 
-    @media screen and (min-width: 400px) {
+    @media screen and (max-width: 400px) {
         margin-right: 10px;
     }
 
