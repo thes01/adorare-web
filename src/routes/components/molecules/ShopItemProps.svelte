@@ -28,7 +28,7 @@
             'Nápis': [
                 'Všechno mé je tvé',
                 'Ty znáš ten správný čas',
-                'Nech ať amé srdce rytmem tančí',
+                'Nech ať mé srdce rytmem tančí',
                 'Měníš to, co nemožné se zdá',
                 'Milostí obklop duši mou',
                 'Vryl sis do dlaní mé jméno',
@@ -37,7 +37,7 @@
                 'Láska tvá je melodií',
                 'K vodám',
                 'Vracíš mi dech',
-                'Ve tvém náručí chci si odpočinout',
+                'V tvém náručí chci si odpočinout',
                 'Zítřek jsi stvořil pro mě',
                 'Adonai',
                 'Já ti naslouchám',

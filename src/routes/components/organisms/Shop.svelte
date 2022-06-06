@@ -34,7 +34,7 @@
             </div>   
             <div class="pl-16">
                 <p class="text-navy-blue opacity-60">Celková cena: {totalPrice} Kč 
-                    {deliveryPrice > 0 ? `+ doprava ${deliveryPrice} Kč` : ''}</p>
+                    {deliveryPrice > 0 ? `+ dobírka ${deliveryPrice} Kč` : ''}</p>
                 {#if !showOrderDetails}
                     <Button disabled={totalPrice === 0} on:click={() => showOrderDetails = true}>Pokračovat v objednávce</Button>
                 {/if}
@@ -99,7 +99,7 @@
     $: orderItems = orderItemsData
     $: orderData = orderDataDefault
 
-    // data for configuration of t-shirts' and bags' variants
+    // data for configuration of t-shirts', bags' and magnets' variants
     $: propsResults = {
         t_shirt: '',
         bag: '',

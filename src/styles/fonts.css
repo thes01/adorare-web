@@ -24,6 +24,10 @@ body h3 {
     font-size: 3em;
 }
 
+body a {
+    @apply underline hover:no-underline text-navy-blue;
+}
+
 .font-monospace {
     font-family: monospace;
     font-size: 1.2em;

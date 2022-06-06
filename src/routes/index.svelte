@@ -29,18 +29,26 @@
             <h2 class="text-right">Budeme rádi za podporu</h2>
             <p class="mb-20">
                 Na potřebné vybavení a nástroje si nevyděláváme jinak než z dobrovolného vstupného a prodejem našich cédéček,
-                zpěvníků (a nově i merche), proto kdykoliv uvítáme váš finanční dar. Peníze nám můžete zaslat na účet <span class="font-monospace">2113503842/2700</span>.
-                Rovněž jsme a budeme dále vděční za vaše modlitby.
+                zpěvníků (a nově i triček, magnetek a plátěnek), které si můžete objednat zde na webu v sekci <a href="#shop">Adorare shop</a> a my vám je dobírkou pošleme.
+                Úsměv na tváři našemu pokladníkovi jistě vykouzlí také váš libovolně štědrý dar na účet <span class="font-monospace">2113503842/2700</span>.
+                Mimo věci ohledně peněz bychom rádi zmínili, že nepopsatelnou podporou jsou pro nás vaše modlitby, díky kterým můžeme opravdu cítit a prožívat Boží požehnání
+                a naším dílem o něm svědčit. Děkujeme! 💙
+
+                <!-- Neobejdeme se také bez finanční podpory . Peníze nám můžete zaslat na účet <span class="font-monospace">2113503842/2700</span>. -->
+                <!-- Nepopsatelnou podporou jsou pro nás vaše modlitby, díky kterým opravdu můžem cítit Boží požehnání do našeho díla.   -->
             </p>
 
             <h2>Nové cd - K vodám</h2>
-            <p class="mb-10"></p>
+            <p class="mb-10">
+                V neděli 5. června 2022 ve Valašských Kloboukách jsme měli čest představit vám naše nejnovější CD autorských písní - <i>K vodám</i>.
+                Titulní písní se stala stejnojmenná píseň, která vyšla online jako singl, po boku animovaného klipu <a href="https://www.youtube.com/watch?v=H4dKb_MfYwk">Malířem nebe</a> ze stejného alba.
+            </p>
             <div class="flex justify-center">
                 <YouTube cls="youtube-k-vodam" src="https://www.youtube.com/embed/VCNvYfCBYvg" title="Adorare - K vodám"/>
             </div>
             
             <div class="skvrny-back-1"></div>
-            <h2 class="mt-12">Adorare shop</h2>
+            <h2 class="mt-12" id="shop">Adorare shop</h2>
             <Shop></Shop>
             <div class="mb-12"></div>
 
