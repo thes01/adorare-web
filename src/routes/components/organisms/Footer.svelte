@@ -13,6 +13,7 @@
             <ul>
                 <li>vedouci(zavináč)adorare.cz</li>
                 <li>web(zavináč)adorare.cz</li>
+                <li>objednavka(zavináč)adorare.cz</li>
             </ul>
         </div>
     </div>
