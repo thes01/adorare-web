@@ -1,8 +1,23 @@
 <form method="POST" action="https://script.google.com/macros/s/AKfycbyXjrnYw1MjohVhDnw-88Acy2zfwokYsI3s2iqAZ3xE4VTy7AMzsGN3sIk32xHJPWVhPg/exec">
 <div>
     <div class="flex flex-wrap -ml-20">
-        <div class="xs:w-full xl:w-2/3 2xl:w-1/2 my-16">        
-            {#each orderItems.filter(item => ['CD', 'Zpěvník'].includes(item.type)) as item}
+        <div class="xs:w-full xl:w-2/3 2xl:w-1/2 mb-16">        
+            <h3 class="ml-20 mb-16">Cd a zpěvníky</h3>
+            {#each orderItems.filter(item => item.type === 'CD') as item}
+                <ShopItem
+                    itemId={item.id}
+                    unavailable="{item.unavailable}"
+                    unavailableLink={item.unavailableLink}
+                    iconSrc="{item.iconSrc}"
+                    iconAlt={`${item.type} ${item.name}`}
+                    topOffset={item.iconTopOffset}
+                    leftOffset={item.iconLeftOffset || 0}
+                    price={item.price}
+                    bind:qty={item.qty}>
+                    {item.name}
+                </ShopItem>
+            {/each}
+            {#each orderItems.filter(item => item.type === 'Zpěvník') as item}
                 <ShopItem
                     itemId={item.id}
                     unavailable="{item.unavailable}"
@@ -18,8 +33,9 @@
             {/each}
         </div>
         <div class="xs:w-full xl:w-2/3 2xl:w-1/2">   
+            <h3 class="ml-20 mb-10">Merch</h3>
             <div class="my-16">
-                {#each orderItems.filter(item => ['Merch'].includes(item.type)) as item}
+                {#each orderItems.filter(item => item.type === 'Merch') as item}
                     <ShopItem
                         itemId={item.id}
                         unavailable="{item.unavailable}"
