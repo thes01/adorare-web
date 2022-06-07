@@ -52,7 +52,7 @@
             </div>   
             <div class="pl-16">
                 <p class="text-navy-blue opacity-60">Celková cena: {totalPrice} Kč 
-                    {deliveryPrice > 0 ? `+ dobírka ${deliveryPrice} Kč` : ''}</p>
+                    {deliveryPrice > 0 ? `+ doprava` : ''}</p>
                 {#if !showOrderDetails}
                     <Button disabled={totalPrice === 0} on:click={() => showOrderDetails = true}>Pokračovat v objednávce</Button>
                 {/if}
@@ -64,6 +64,13 @@
         <div class="flex flex-wrap md:flex-nowrap
                     -mx-6 md:mx-0">
             <div class="xs:w-full md:w-1/2 md:order-last pl-2">
+                <h3>Způsob dopravy a platby</h3>
+                <select bind:value={selectedDeliveryType}
+                    class="block appearance-none border py-1 pr-8 pl-3 mx-3 focus:outline-none focus:bg-white border-navy-blue">
+                    <option value="ucet">Česká pošta - převodem na účet (+ 60 Kč)</option>
+                    <option value="dobirka">Česká pošta - dobírkou (+ 120 Kč)</option>
+                </select>
+
                 {#if anyItemsWithProps}
                     <h3>Výběr variant</h3>
                 {/if}
@@ -91,7 +98,8 @@
 
                     <input type="hidden" name="note_sizes" value={orderData.note_sizes}>
                     <input type="hidden" name="route" value="submit">
-                    <input type="hidden" name="orderItem.dobirka" value="1">
+                    <input type="hidden" name="orderItem.dobirka" value={selectedDeliveryType == 'dobirka' ? 1 : 0}>
+                    <input type="hidden" name="orderItem.ucet" value={selectedDeliveryType == 'ucet' ? 1 : 0}>
             
                     <ReCaptchaField bind:value={orderData.recaptcha_response}></ReCaptchaField>
 
@@ -114,6 +122,11 @@
     import orderDataDefault from '../../data/OrderData'
 
     let showOrderDetails = false;
+    let selectedDeliveryType = 'ucet';
+    const deliveryPrices = {
+        ucet: 60,
+        dobirka: 120
+    }
 
     $: orderItems = orderItemsData
     $: orderData = orderDataDefault
@@ -131,5 +144,5 @@
     
     const sum = (a, b) => a + b
     $: totalPrice = orderItems.map(item => (item.price || 0) * (item.qty || 0)).reduce(sum)
-    $: deliveryPrice = totalPrice === 0 ? 0 : 80
+    $: deliveryPrice = totalPrice === 0 ? 0 : deliveryPrices[selectedDeliveryType]
 </script>
