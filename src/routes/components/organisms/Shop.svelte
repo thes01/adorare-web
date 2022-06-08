@@ -1,4 +1,4 @@
-<form method="POST" action="https://script.google.com/macros/s/AKfycbyXjrnYw1MjohVhDnw-88Acy2zfwokYsI3s2iqAZ3xE4VTy7AMzsGN3sIk32xHJPWVhPg/exec">
+<form method="POST" action={gdocApi.GAPP_URL}>
 <div>
     <div class="flex flex-wrap -ml-20">
         <div class="xs:w-full xl:w-2/3 2xl:w-1/2 mb-16">        
@@ -112,6 +112,7 @@
 </form>
 
 <script>
+    import gdocApi from '../../../helpers/gdocApi'
     import ShopItem from '../molecules/ShopItem.svelte'
     import Button from '../atoms/Button.svelte'
     import TextField from '../atoms/TextField.svelte'
