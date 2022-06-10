@@ -28,19 +28,13 @@
             </p>
 
             <h2 class="leading-none">Nové cd - K&nbsp;vodám</h2>
-            <p class="mb-10">
-                V neděli 5. června 2022 ve Valašských Kloboukách jsme měli čest představit vám naše nejnovější CD autorských písní - <i>K vodám</i>.
-                Titulní písní se stala stejnojmenná píseň, která vyšla online jako singl, po boku animovaného klipu <a href="https://www.youtube.com/watch?v=H4dKb_MfYwk">Malířem nebe</a> ze stejného alba.
-            </p>
-            <div class="flex justify-center">
-                <YouTube cls="mobile-full" src="https://www.youtube.com/embed/VCNvYfCBYvg" title="Adorare - K vodám"/>
-            </div>
+            <NewCd></NewCd>
             
             <div class="skvrny-back-1"></div>
             <h2 class="mt-12" id="shop">Adorare shop</h2>
             <Shop></Shop>
             <div class="mt-6 mb-12 mobile-full">
-                <Gallery imgItems={GalleryImages.ImageList}></Gallery>
+                <Gallery imgItems={GalleryImages.Merch}></Gallery>
                 <p><a target="_blank" href="https://eu.zonerama.com/KaterinaHolbova/Album/8480142?secret=6650xgJ2gIl7D7CtIjf39Bg0T">Všechny propagační fotky najdete zde</a></p>
             </div>
 
@@ -56,11 +50,11 @@
     import NavBar from './components/organisms/NavBar.svelte'
     import Members from './components/organisms/Members.svelte';
     import Footer from './components/organisms/Footer.svelte';
-    import YouTube from './components/atoms/YouTube.svelte';
+    import NewCd from './components/organisms/NewCd.svelte';
 
     import Shop from './components/organisms/Shop.svelte'
     import Gallery from './components/organisms/Gallery.svelte';
     import GalleryImages from './data/GalleryImages';
 
-    import "vanilla-tilt"
+    import "vanilla-tilt";
 </script>
