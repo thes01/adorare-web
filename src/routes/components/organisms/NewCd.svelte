@@ -12,7 +12,13 @@
         <YouTube cls="w-full mb-2" src={videos[tab]} title="Adorare - Klip"/>
     </div>
     <div class="md:w-5/12 lg:w-4/12 md:pl-8">
-        <Gallery imgItems={backs[tab]}></Gallery>
+        <div hidden={tab != 'k-vodam'}>
+            <Gallery imgItems={[...GalleryImages.BackgroundsKvodam, GalleryImages.BackgroundsOthers]} galleryName="tapety-k-vodam"></Gallery>
+        </div>
+    
+        <div hidden={tab != 'malirem-nebe'}>
+            <Gallery imgItems={GalleryImages.BackgroundsZalm} galleryName="tapety-malirem-nebe"></Gallery>
+        </div>
     </div>
 </div>
 
@@ -24,11 +30,6 @@
     import GalleryImages from '../../data/GalleryImages';
 
     let tab = 'k-vodam'
-
-    const backs = {
-        'k-vodam': [...GalleryImages.BackgroundsKvodam, ...GalleryImages.BackgroundsOthers],
-        'malirem-nebe': GalleryImages.BackgroundsZalm
-    }
 
     const videos = {
         'k-vodam': 'https://www.youtube.com/embed/VCNvYfCBYvg',

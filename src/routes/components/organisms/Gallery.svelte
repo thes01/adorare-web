@@ -1,6 +1,4 @@
-<!-- todo: add Splide or some other carousely-thing for images -->
-<!-- https://splidejs.com/integration/svelte-splide/ -->
-<Splide aria-label="My Favorite Images">
+<Splide aria-label="Galerie">
     {#each imgItems as imgItem}
         <SplideSlide>
             <a href={imgItem.fullUrl} class="glightbox" data-gallery={galleryName}>

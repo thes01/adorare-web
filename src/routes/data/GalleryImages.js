@@ -26,9 +26,8 @@ function shuffled(arr) {
             .sort().map(function(n){ return n[1] });
 }
 
-function listOfImages(urls, random=false, thumb_w = 1000) {
-    let l = urls.map(url => new Img(url, thumb_w))
-    return random ? shuffled(l) : l
+function listOfImages(urls, thumb_w = 1000) {
+    return urls.map(url => new Img(url, thumb_w))
 }
 
 export default {
@@ -53,7 +52,7 @@ export default {
         'v1654600929/ado-tapety/K%20vod%C3%A1m/8_uwyveg.png',
         'v1654600959/ado-tapety/K%20vod%C3%A1m/9_l1p8rk.png',
         'v1654600885/ado-tapety/K%20vod%C3%A1m/10_ke390p.png'
-    ], true, 400),
+    ], 400),
 
     BackgroundsOthers: listOfImages([
         'v1654855362/ado-tapety/13_il3ilj.png',
@@ -69,7 +68,7 @@ export default {
         'v1654855914/ado-tapety/23_m8ssyd.png',
         'v1654856004/ado-tapety/24_c6sdiz.png',
         'v1654856096/ado-tapety/25_cm6pjr.png',
-    ], false, 400),
+    ], 400),
 
     BackgroundsZalm: listOfImages([
         'v1654692375/ado-tapety/Mal%C3%AD%C5%99em%20nebe/1_psrikk.png',
@@ -97,5 +96,5 @@ export default {
         'v1654853097/ado-tapety/Mal%C3%AD%C5%99em%20nebe/23_zbcypp.png',
         'v1654853127/ado-tapety/Mal%C3%AD%C5%99em%20nebe/24_wkz8f5.png',
         'v1654853159/ado-tapety/Mal%C3%AD%C5%99em%20nebe/25_po8pcm.png',
-    ], false, 400)
+    ], 400)
 }
