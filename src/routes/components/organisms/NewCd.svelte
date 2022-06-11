@@ -13,11 +13,11 @@
     </div>
     <div class="md:w-5/12 lg:w-4/12 md:pl-8">
         <div hidden={tab != 'k-vodam'}>
-            <Gallery imgItems={[...GalleryImages.BackgroundsKvodam, GalleryImages.BackgroundsOthers]} galleryName="tapety-k-vodam"></Gallery>
+            <GalleryDownload imgItems={[...GalleryImages.BackgroundsKvodam, GalleryImages.BackgroundsOthers]}></GalleryDownload>
         </div>
     
         <div hidden={tab != 'malirem-nebe'}>
-            <Gallery imgItems={GalleryImages.BackgroundsZalm} galleryName="tapety-malirem-nebe"></Gallery>
+            <GalleryDownload imgItems={GalleryImages.BackgroundsZalm}></GalleryDownload>
         </div>
     </div>
 </div>
@@ -26,7 +26,7 @@
 <script>
     import YouTube from '../../components/atoms/YouTube.svelte';
 
-    import Gallery from '../../components/organisms/Gallery.svelte';
+    import GalleryDownload from './GalleryDownload.svelte';
     import GalleryImages from '../../data/GalleryImages';
 
     let tab = 'k-vodam'

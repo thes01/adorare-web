@@ -19,6 +19,10 @@ class Img {
     get fullUrl() {
         return this.transformedUrl('c_scale,q_85,w_1920')
     }
+
+    downloadUrl(filename) {
+        return this.transformedUrl(`fl_attachment:${filename}`)
+    }
 }
 
 function shuffled(arr) {
