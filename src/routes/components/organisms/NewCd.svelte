@@ -13,7 +13,7 @@
     </div>
     <div class="md:w-5/12 lg:w-4/12 md:pl-8">
         <div hidden={tab != 'k-vodam'}>
-            <GalleryDownload imgItems={[...GalleryImages.BackgroundsKvodam, GalleryImages.BackgroundsOthers]}></GalleryDownload>
+            <GalleryDownload imgItems={[...GalleryImages.BackgroundsKvodam, ...GalleryImages.BackgroundsOthers]}></GalleryDownload>
         </div>
     
         <div hidden={tab != 'malirem-nebe'}>
