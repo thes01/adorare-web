@@ -1,7 +1,47 @@
-.youtube-malirem {
-    width: 80vw;
-    height: 32vw;
+.youtube-malirem-nebe {
+    height: calc(51vw - 6rem);
 
-    max-width: 620px;
-    max-height: 260px;
+    @screen sm {
+        height: 214px;
+    }
+
+    @screen md {
+        height: 156px;
+    }
+
+    @screen lg {
+        height: 214px;
+    }
+
+    @screen xl {
+        height: 250px;
+    }
+
+    @screen 2xl {
+        height: 321px;
+    }
+}
+
+.youtube-k-vodam {
+    height: calc(62vw - 6rem);
+
+    @screen sm {
+        height: 288px;
+    }
+
+    @screen md {
+        height: 210px;
+    }
+
+    @screen lg {
+        height: 288px;
+    }
+
+    @screen xl {
+        height: 335px;
+    }
+
+    @screen 2xl {
+        height: 432px;
+    }
 }

@@ -9,7 +9,7 @@
             <button on:click={() => tab = 'k-vodam'} class={`border-2 p-3 ${borders['k-vodam']}`}>K vodám</button>
             <button on:click={() => tab = 'malirem-nebe'} class={`border-2 p-3 ${borders['malirem-nebe']}`}>Malířem nebe</button>
         </div>
-        <YouTube cls="w-full mb-2" src={videos[tab]} title="Adorare - Klip"/>
+        <YouTube cls={`w-full mb-2 youtube-${tab}`} src={videos[tab]} title="Adorare - Klip"/>
     </div>
     <div class="md:w-5/12 lg:w-4/12 md:pl-8">
         <div hidden={tab != 'k-vodam'}>
