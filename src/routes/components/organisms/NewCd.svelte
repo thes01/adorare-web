@@ -8,6 +8,7 @@
         <div class="mb-2">
             <button on:click={() => tab = 'k-vodam'} class={`border-2 p-3 ${borders['k-vodam']}`}>K vodám</button>
             <button on:click={() => tab = 'malirem-nebe'} class={`border-2 p-3 ${borders['malirem-nebe']}`}>Malířem nebe</button>
+            <button on:click={() => tab = 'poklady'} class={`border-2 p-3 ${borders['poklady']}`}>Poklady</button>
         </div>
         <YouTube cls={`w-full mb-2 youtube-${tab}`} src={videos[tab]} title="Adorare - Klip"/>
     </div>
@@ -18,6 +19,12 @@
     
         <div hidden={tab != 'malirem-nebe'}>
             <GalleryDownload imgItems={GalleryImages.BackgroundsZalm}></GalleryDownload>
+        </div>
+
+        <div hidden={tab != 'poklady'} class="text-gray-600 italic text-lg">
+            <p class="mb-2">"Neukládejte si poklady na zemi, kde je ničí mol a rez a kde je zloději vykopávají a kradou. Ukládejte si poklady v nebi, kde je neničí mol ani rez a kde je zloději nevykopávají a nekradou. Neboť kde je tvůj poklad, tam bude i tvé srdce."
+                </p>
+                <p>Mt 6,19-21</p>
         </div>
     </div>
 </div>
@@ -33,11 +40,13 @@
 
     const videos = {
         'k-vodam': 'https://www.youtube.com/embed/VCNvYfCBYvg',
-        'malirem-nebe': 'https://www.youtube.com/embed/H4dKb_MfYwk'
+        'malirem-nebe': 'https://www.youtube.com/embed/H4dKb_MfYwk',
+        'poklady': 'https://www.youtube.com/embed/6plW50YJBl4'
     }
 
     $: borders = {
         'k-vodam': tab == 'k-vodam' ? 'border-blue-200' : 'border-gray-200',
-        'malirem-nebe': tab == 'malirem-nebe' ? 'border-orange-200': 'border-gray-200'
+        'malirem-nebe': tab == 'malirem-nebe' ? 'border-orange-200': 'border-gray-200',
+        'poklady': tab == 'poklady' ? 'border-blue-400' : 'bordery-gray-200'
     }
 </script>

@@ -38,6 +38,9 @@
                 <p><a target="_blank" href="https://eu.zonerama.com/KaterinaHolbova/Album/8480142?secret=6650xgJ2gIl7D7CtIjf39Bg0T">Všechny propagační fotky najdete zde</a></p>
             </div>
 
+            <!-- <h2 class="mt-12 text-right" id="noty">Noty</h2>
+            <p>Blablabla</p> -->
+
             <!-- <Members></Members> -->
     </main>
 

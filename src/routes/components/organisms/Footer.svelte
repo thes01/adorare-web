@@ -8,6 +8,7 @@
             <a class="text-white no-underline hover:underline" href="https://adorare.cz/na-instagramu" target="_blank">/na-instagramu</a>
             <a class="text-white no-underline hover:underline" href="https://adorare.cz/na-spotify" target="_blank">/na-spotify</a>
             <a class="text-white no-underline hover:underline" href="https://adorare.cz/na-youtube" target="_blank">/na-youtube</a>
+            <a class="text-white no-underline hover:underline" href="https://zpevnik.proscholy.cz/autor/9" target="_blank">/na-zpevniku</a>
         </div>
 
         <div class="font-work-sans text-right
