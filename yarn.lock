@@ -176,7 +176,7 @@
     "@vercel/nft" "^0.19.1"
     esbuild "^0.14.42"
 
-"@sveltejs/kit@^1.0.0-next.348":
+"@sveltejs/kit@1.0.0-next.348":
   version "1.0.0-next.348"
   resolved "https://registry.yarnpkg.com/@sveltejs/kit/-/kit-1.0.0-next.348.tgz#82ae2d99617d91e87472677238a2cd93a787111d"
   integrity sha512-K9dfgzIbotWmbcdCsQ6ROGs9R+bsGWwmSdN6l6km1QV5esQehqg1UYHGD9q0VJsg4rJg/zmKVBYo0oBquSHPZw==
