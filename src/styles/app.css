@@ -9,6 +9,7 @@
 @import "./atoms/button.css";
 @import "./atoms/shopitem.css";
 @import "./atoms/youtube.css";
+@import "./molecules/timeline.css";
 
 
 body p {
