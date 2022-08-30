@@ -19,6 +19,7 @@ module.exports = {
         }, 
         colors: {
             'navy-blue': '#1c354b',
+            'gray-blue': '#9db1b8'
         },   
     },
     plugins: [
