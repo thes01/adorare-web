@@ -1,4 +1,6 @@
-<div class={cls} bind:this={player} title={title} style="width: 560px; height: 315px;"/>
+<div class={cls}>
+  <div bind:this={player} title={title} style="width: 560px; height: 315px;"/>
+</div>
 
 <script context="module">
     /**
@@ -25,6 +27,7 @@
     export let videoId;
     export let cls;
     export let title;
+    export let playerVars = {};
     let player;
     let loadedVideoId = '';
 
@@ -32,6 +35,7 @@
     onMount(() => {
         player = YoutubePlayer(player, {
             videoId,
+            playerVars
         });
         player.on('stateChange', onPlayerStateChange);
         loadedVideoId = videoId;
