@@ -19,7 +19,6 @@
         </div>
         
         <YouTube cls={`w-full relative -top-20 youtube-${tab}`} videoId={videos[tab]} title="Adorare - Klip"/>
-
     </div>
     <div class="md:w-5/12 lg:w-4/12 md:pl-8">
         <div hidden={tab != 'k-vodam'}>
