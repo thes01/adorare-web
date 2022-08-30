@@ -35,9 +35,10 @@
                 </div>
                 <div class="w-1/2 pl-28">
                     <h3>Záznamy z celostátního setkání</h3>
-                    <p class="mb-2">Na Youtube si můžete pustit záznamy ze sobotní vigílie a nedělní mše, které jsme doprovázeli.</p>
+                    <p class="mb-2">Na Youtube si můžete pustit záznamy z programu, který jsme doprovázeli.</p>
                     <ul>
-                        <li on:click={() => changeVideo('aaa', 0)} class="underline hover:no-underline cursor-pointer">Řeknu všem</li>
+                        <li><a href="https://youtu.be/U4Cd-Vr4QYM?t=34">Sobotní vigílie</a></li>
+                        <li><a href="https://youtu.be/Uh24LYwC1gA?t=29">Nedělní mše</a></li>
                     </ul>
                 </div>
             </div>

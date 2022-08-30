@@ -1,22 +1,22 @@
 .timeline-dot {
     border-radius: 100%;
-    width: 12px;
-    height: 12px;
-    background-color: black;
+    width: 11px;
+    height: 11px;
+    background-color: rgb(200, 200, 200);
     position: absolute;
-    right: calc(2.5rem - 5px);
+    right: calc(2.5rem - 4px);
 }
 
 .timeline-line {
     width: 2px;
-    background: black;
+    background: rgb(200, 200, 200);
     position: absolute;
 }
 
 .timeline-fader-bottom {
-    background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100px, rgba(0,0,0,1) 100%);
+    background: linear-gradient(0deg, rgba(200, 200, 200,0) 0%, rgba(200, 200, 200,1) 100px, rgba(200, 200, 200,1) 100%);
 }
 
 .timeline-fader-top {
-    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100px, rgba(0,0,0,1) 100%);
+    background: linear-gradient(180deg, rgba(200, 200, 200,0) 0%, rgba(200, 200, 200,1) 100px, rgba(200, 200, 200,1) 100%);
 }

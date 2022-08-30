@@ -5,7 +5,9 @@
         style={`height: ${bottomPx}px; bottom: -${bottomPx}px;`}></div>
     <div class="timeline-dot -top-16"></div>
 
-    <slot></slot>
+    <div style={transformStyle}>
+        <slot></slot>
+    </div>
 </div>
 
 
@@ -13,4 +15,8 @@
     export let topPx = 200;
     export let bottomPx = 200;
     export let cls = '';
+
+    export let right = false;
+
+    $: transformStyle = right ? 'transform: translateX(50%);' : '';
 </script>
