@@ -10,7 +10,7 @@
             <button on:click={() => tab = 'malirem-nebe'} class={`border-2 p-3 ${borders['malirem-nebe']}`}>Malířem nebe</button>
             <button on:click={() => tab = 'poklady'} class={`border-2 p-3 ${borders['poklady']}`}>Poklady</button>
         </div>
-        <YouTube cls={`w-full mb-2 youtube-${tab}`} src={videos[tab]} title="Adorare - Klip"/>
+        <YouTube cls={`w-full mb-2 youtube-${tab}`} videoId={videos[tab]} title="Adorare - Klip"/>
     </div>
     <div class="md:w-5/12 lg:w-4/12 md:pl-8">
         <div hidden={tab != 'k-vodam'}>
@@ -39,9 +39,9 @@
     let tab = 'k-vodam'
 
     const videos = {
-        'k-vodam': 'https://www.youtube.com/embed/VCNvYfCBYvg',
-        'malirem-nebe': 'https://www.youtube.com/embed/H4dKb_MfYwk',
-        'poklady': 'https://www.youtube.com/embed/6plW50YJBl4'
+        'k-vodam': 'VCNvYfCBYvg',
+        'malirem-nebe': 'H4dKb_MfYwk',
+        'poklady': '6plW50YJBl4'
     }
 
     $: borders = {
