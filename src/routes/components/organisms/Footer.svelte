@@ -13,7 +13,7 @@
 
         <div class="font-work-sans text-right
         w-full sm:w-1/2">
-            <h2>Kontakt</h2>
+            <h2 tabindex="-1" id="kontakt">Kontakt</h2>
             <ul>
                 <li>vedouci(zavináč)adorare.cz</li>
                 <li>web(zavináč)adorare.cz</li>
