@@ -34,8 +34,6 @@
             <p class="mb-2">"Neukládejte si poklady na zemi, kde je ničí mol a rez a kde je zloději vykopávají a kradou. Ukládejte si poklady v nebi, kde je neničí mol ani rez a kde je zloději nevykopávají a nekradou. Neboť kde je tvůj poklad, tam bude i tvé srdce."
                 </p>
                 <p>Mt 6,19-21</p>
-
-            <img src="/layout/skvrny_2.jpg" alt="">
         </div>
     </div>
 </div>
