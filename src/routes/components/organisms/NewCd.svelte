@@ -10,17 +10,17 @@
             <button on:click={() => tab = 'malirem-nebe'} class={`border-2 p-3 ${borders['malirem-nebe']}`}>Malířem nebe</button>
             <button on:click={() => tab = 'poklady'} class={`border-2 p-3 ${borders['poklady']}`}>Poklady</button>
         </div>
-        <div class="flex justify-center relative -top-14 -right-28 -z-10">
+        <!-- <div class="flex justify-center relative -top-14 -right-28 -z-10">
             <TimelineWrapper topPx={280} bottomPx={400} cls={hideBoxCls} right={true}> 
                 <ColorBox title="Poklady" cls="bg-beige">
                     Máme nový videoklip!
                 </ColorBox>
             </TimelineWrapper>
-        </div>
+        </div> -->
         
         <YouTube cls={`w-full relative -top-20 youtube-${tab}`} videoId={videos[tab]} title="Adorare - Klip"/>
     </div>
-    <div class="md:w-5/12 lg:w-4/12 md:pl-8">
+    <div class="md:w-5/12 lg:w-4/12">
         <div hidden={tab != 'k-vodam'}>
             <GalleryDownload imgItems={[...GalleryImages.BackgroundsKvodam, ...GalleryImages.BackgroundsOthers]}></GalleryDownload>
         </div>
