@@ -18,23 +18,31 @@
                 různá setkání mládeže, vedeme večery chval a koncertujeme.
             <p>
 
-            <div class="flex">
-                <div class="w-1/2">
-                    <YouTube cls={`mb-2 relative ${ytbCls}`} 
+            <div class="flex flex-wrap md:flex-nowrap">
+                <div class="w-full md:w-1/2">
+                    <YouTube cls={`mb-2 relative ${ytbCls} flex`} 
                             videoId="jKpT_KpyC-I"
                             title="Adorare - Představení na CSM Hradec Králové"
                             on:play={hideBox}
                             playerVars={{color: 'white', modestbranding: 1}}/>
-                    <div class="flex justify-center relative -top-20 -right-40">
+                    <div class="justify-center relative -top-20
+                        -right-32 md:-right-20 lg:-right-24 xl:-right-28 2xl:-right-40
+                        hidden sm:flex">
                         <TimelineWrapper topPx={280} bottomPx={100} cls={hideBoxCls}> 
                             <ColorBox title="CSM Hradec Králové" cls="bg-gray-blue">
                                 Děkujeme TV Noe za natočení<br>krátkého klipu o naší skupině. 💙
                             </ColorBox>
                         </TimelineWrapper>
                     </div>
+
+                    <!-- mobile -->
+                    <ColorBox title="CSM Hradec Králové" cls="sm:hidden bg-gray-blue">
+                        Děkujeme TV Noe za natočení<br>krátkého klipu o naší skupině. 💙
+                    </ColorBox>
                 </div>
-                <div class="w-1/2 pl-28">
-                    <h3>Záznamy z celostátního setkání</h3>
+                <div class="w-full md:w-1/2 md:pl-28
+                            mb-8 md:mb-0">
+                    <h3 class="leading-none mb-4">Záznamy z celostátního setkání</h3>
                     <p class="mb-2">Na Youtube si můžete pustit záznamy z programu, který jsme doprovázeli.</p>
                     <ul>
                         <li><a href="https://youtu.be/U4Cd-Vr4QYM?t=34">Sobotní vigílie</a></li>
