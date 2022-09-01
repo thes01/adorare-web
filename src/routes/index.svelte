@@ -2,7 +2,7 @@
     <div class="mx-8 mt-4">
         <!-- <img src="/adologo_dark.svg" alt="adorare" class="w-32"> -->
     </div>
-    <!-- <NavBar></NavBar> -->
+    <NavBar></NavBar>
     <header class="flex justify-center">
         <Hero></Hero>
     </header>
@@ -44,20 +44,20 @@
             </div>
 
                 
-            <h2 class="text-right">Budeme rádi za podporu</h2>
+            <h2 class="">Budeme rádi za podporu</h2>
             <p class="mb-20">
                 Na potřebné vybavení a nástroje si nevyděláváme jinak než z dobrovolného vstupného a prodejem našich cédéček,
-                zpěvníků (a nově i triček, magnetek a plátěnek), které si můžete objednat zde na webu v sekci <a href="#shop">Adorare shop</a> a my vám je zašleme poštou.
+                zpěvníků (a nově i triček, magnetek a plátěnek), které si můžete objednat zde na webu v sekci <a href="#objednavka">Adorare shop</a> a my vám je zašleme poštou.
                 Úsměv na tváři našemu pokladníkovi jistě vykouzlí také váš libovolně štědrý dar na účet <span class="font-monospace">2113503842/2700</span>.
                 Mimo věci ohledně peněz bychom rádi zmínili, že nepopsatelnou podporou jsou pro nás vaše modlitby, díky kterým můžeme opravdu cítit a prožívat Boží požehnání
                 a naším dílem o něm svědčit. Děkujeme!
             </p>
 
-            <h2 class="leading-none">Nové cd - K&nbsp;vodám</h2>
+            <h2 id="nove-cd" class="leading-none">Nové cd - K&nbsp;vodám</h2>
             <NewCd></NewCd>
             
             <div class="skvrny-back-1"></div>
-            <h2 class="mt-12" id="shop">Adorare shop</h2>
+            <h2 class="mt-12" id="objednavka">Adorare shop</h2>
             <Shop></Shop>
             <div class="mt-6 mb-12 mobile-full">
                 <Gallery imgItems={GalleryImages.Merch}></Gallery>
