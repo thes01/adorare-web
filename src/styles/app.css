@@ -23,3 +23,7 @@ body ::selection {
 .mobile-full {
     @apply -mx-12 sm:mx-0;
 }
+
+html:focus-within {
+    scroll-behavior: smooth;
+}

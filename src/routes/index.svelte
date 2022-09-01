@@ -8,7 +8,7 @@
     </header>
     <main class="container mx-auto">
         <div class="w-100">
-            <h2 class="kanka-1">Něco málo o&nbsp;nás</h2>
+            <h2 tabindex="-1" id="o-nas" class="kanka-1">Něco málo o&nbsp;nás</h2>
             <p class="mb-14">
                 Jsme křesťanská hudební skupina, která má svůj původ v obci Študlov na Valašskoklobucku.
                 Poprvé jsme pod názvem Adorare (tj. klanět se, chválit...), vystoupili v roce 2006 na hudebním
@@ -44,7 +44,7 @@
             </div>
 
                 
-            <h2 class="">Budeme rádi za podporu</h2>
+            <h2 tabindex="-1" id="podporte-nas">Budeme rádi za podporu</h2>
             <p class="mb-20">
                 Na potřebné vybavení a nástroje si nevyděláváme jinak než z dobrovolného vstupného a prodejem našich cédéček,
                 zpěvníků (a nově i triček, magnetek a plátěnek), které si můžete objednat zde na webu v sekci <a href="#objednavka">Adorare shop</a> a my vám je zašleme poštou.
@@ -53,11 +53,11 @@
                 a naším dílem o něm svědčit. Děkujeme!
             </p>
 
-            <h2 id="nove-cd" class="leading-none">Nové cd - K&nbsp;vodám</h2>
+            <h2 tabindex="-1" id="nove-cd" class="leading-none">Nové cd - K&nbsp;vodám</h2>
             <NewCd></NewCd>
             
             <div class="skvrny-back-1"></div>
-            <h2 class="mt-12" id="objednavka">Adorare shop</h2>
+            <h2 tabindex="-1" class="mt-12" id="objednavka">Adorare shop</h2>
             <Shop></Shop>
             <div class="mt-6 mb-12 mobile-full">
                 <Gallery imgItems={GalleryImages.Merch}></Gallery>
