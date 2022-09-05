@@ -2,8 +2,8 @@
     fixed
     md:relative z-10">
     <div class={`md:container md:items-center md:justify-between md:h-auto md:flex-wrap md:flex-row md:w-auto
-       flex flex-col justify-start items-stretch mx-auto h-screen
-        ${backdropCls}`}>
+       flex flex-col justify-start items-stretch mx-auto
+        ${expClass}`}>
       <NavBarButton cls={`self-start ${navbarBtnWidthCls}`}></NavBarButton>
       <div class="mx-8 mt-4 hidden lg:block">
         <img src="/adologo_dark.svg" alt="adorare" class="w-32">
@@ -16,9 +16,9 @@
   import NavBarItems from '../molecules/NavBarItems.svelte';
   import NavBarButton from "../atoms/NavBarButton.svelte";
 
-  let backdropCls = '';
+  let expClass = '';
   let navbarBtnWidthCls = 'w-auto';
-  menuExpanded.subscribe(val => backdropCls = val ? 'backdrop-blur-sm w-screen' : '')
+  menuExpanded.subscribe(val => expClass = val ? 'backdrop-blur-sm w-screen h-screen' : '')
   menuExpanded.subscribe(val => navbarBtnWidthCls = val ? 'w-48' : 'w-auto')
 </script>
 

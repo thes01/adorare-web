@@ -1,6 +1,6 @@
 <Layout>
     <NavBar></NavBar>
-    <header class="flex justify-center">
+    <header class="flex justify-center overflow-hidden">
         <Hero></Hero>
     </header>
     <main class="container mx-auto">
