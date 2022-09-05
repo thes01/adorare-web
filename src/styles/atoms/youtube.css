@@ -1,4 +1,13 @@
-.youtube-malirem-nebe {
+.youtube-wrapper div {
+    width: 560px;
+    height: 315px;
+}
+
+.youtube-wrapper iframe {
+    width: 100%;
+}
+
+.youtube-malirem-nebe iframe {
     height: calc(51vw - 6rem);
 
     @screen sm {
@@ -22,7 +31,7 @@
     }
 }
 
-.youtube-k-vodam, .youtube-poklady {
+.youtube-normal iframe, .youtube-k-vodam iframe, .youtube-poklady iframe {
     height: calc(62vw - 6rem);
 
     @screen sm {

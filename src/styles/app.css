@@ -9,6 +9,7 @@
 @import "./atoms/button.css";
 @import "./atoms/shopitem.css";
 @import "./atoms/youtube.css";
+@import "./molecules/timeline.css";
 
 
 body p {
@@ -21,4 +22,8 @@ body ::selection {
 
 .mobile-full {
     @apply -mx-12 sm:mx-0;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
 }

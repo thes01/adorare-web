@@ -1,18 +1,26 @@
 <div class="flex flex-wrap md:flex-nowrap">
-    <div class="w-full md:w-7/12 lg:w-8/12">
+    <div class="w-full md:w-7/12 lg:w-8/12 md:pr-10">
         <p class="mb-10">
             V neděli 5. června 2022 ve Valašských Kloboukách jsme měli čest představit vám naše nejnovější CD autorských písní - <i>K vodám</i>.
             Titulní písní se stala stejnojmenná píseň, která vyšla online jako singl, po boku animovaného klipu <button on:click={() => tab = 'malirem-nebe'} class="underline hover:no-underline">Malířem nebe</button> ze stejného alba.
             <span class="md:hidden">Pod videm</span><span class="hidden md:inline-block">Vpravo</span> také naleznete sadu tématických tapet, které si můžete stáhnout na váš mobil.
         </p>
-        <div class="mb-2">
+        <div class="mb-2 relative">
             <button on:click={() => tab = 'k-vodam'} class={`border-2 p-3 ${borders['k-vodam']}`}>K vodám</button>
             <button on:click={() => tab = 'malirem-nebe'} class={`border-2 p-3 ${borders['malirem-nebe']}`}>Malířem nebe</button>
             <button on:click={() => tab = 'poklady'} class={`border-2 p-3 ${borders['poklady']}`}>Poklady</button>
         </div>
-        <YouTube cls={`w-full mb-2 youtube-${tab}`} src={videos[tab]} title="Adorare - Klip"/>
+        <!-- <div class="flex justify-center relative -top-14 -right-28 -z-10">
+            <TimelineWrapper topPx={280} bottomPx={400} cls={hideBoxCls} right={true}> 
+                <ColorBox title="Poklady" cls="bg-beige">
+                    Máme nový videoklip!
+                </ColorBox>
+            </TimelineWrapper>
+        </div> -->
+        
+        <YouTube cls={`w-full relative youtube-${tab} mb-4`} videoId={videos[tab]} title="Adorare - Klip"/>
     </div>
-    <div class="md:w-5/12 lg:w-4/12 md:pl-8">
+    <div class="md:w-5/12 lg:w-4/12">
         <div hidden={tab != 'k-vodam'}>
             <GalleryDownload imgItems={[...GalleryImages.BackgroundsKvodam, ...GalleryImages.BackgroundsOthers]}></GalleryDownload>
         </div>
@@ -32,16 +40,15 @@
 
 <script>
     import YouTube from '../../components/atoms/YouTube.svelte';
-
     import GalleryDownload from './GalleryDownload.svelte';
     import GalleryImages from '../../data/GalleryImages';
 
-    let tab = 'k-vodam'
+    let tab = 'poklady'
 
     const videos = {
-        'k-vodam': 'https://www.youtube.com/embed/VCNvYfCBYvg',
-        'malirem-nebe': 'https://www.youtube.com/embed/H4dKb_MfYwk',
-        'poklady': 'https://www.youtube.com/embed/6plW50YJBl4'
+        'k-vodam': 'VCNvYfCBYvg',
+        'malirem-nebe': 'H4dKb_MfYwk',
+        'poklady': '6plW50YJBl4'
     }
 
     $: borders = {
@@ -49,4 +56,6 @@
         'malirem-nebe': tab == 'malirem-nebe' ? 'border-orange-200': 'border-gray-200',
         'poklady': tab == 'poklady' ? 'border-blue-400' : 'bordery-gray-200'
     }
+
+    let hideBoxCls = '';
 </script>
