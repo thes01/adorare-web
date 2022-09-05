@@ -1,8 +1,8 @@
-<button type="button" class="inline-flex items-center p-2 md:ml-3 text-sm 
+<button type="button" class={`${cls} inline-flex items-center p-2 md:ml-3 text-sm 
     bg-white
     text-gray-500 rounded-lg md:hidden 
     hover:bg-gray-100 
-    focus:outline-none focus:ring-2 focus:ring-gray-200"
+    focus:outline-none focus:ring-2 focus:ring-gray-200`}
     on:click={toggleMenu}>
 
     <span class="sr-only">Otevřít hlavní menu</span>
@@ -17,5 +17,6 @@
     import { menuExpanded, toggleMenu } from "../organisms/NavBar.svelte";
 
     let expanded;
+    export let cls = '';
     menuExpanded.subscribe(val => expanded = val);
 </script>

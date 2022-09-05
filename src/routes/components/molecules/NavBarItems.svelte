@@ -1,4 +1,4 @@
-<div class={`${cls} w-full md:block md:w-auto bg-white`} id="mobile-menu">
+<div class={`${cls} ${hiddenCls} md:block md:w-auto bg-white`} id="mobile-menu">
     <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-3 md:text-md">
       <li>
         <NavBarItem href="#o-nas">O nás</NavBarItem>
@@ -28,6 +28,7 @@
     import NavBarItem from "../atoms/NavBarItem.svelte";
     import { menuExpanded } from "../organisms/NavBar.svelte";
 
-    let cls;
-    menuExpanded.subscribe(val => cls = val ? '' : 'hidden');
+    let hiddenCls;
+    export let cls;
+    menuExpanded.subscribe(val => hiddenCls = val ? '' : 'hidden');
   </script>
