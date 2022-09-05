@@ -8,7 +8,7 @@
       <div class="mx-8 mt-4 hidden lg:block">
         <img src="/adologo_dark.svg" alt="adorare" class="w-32">
       </div>
-      <NavBarItems cls="grow w-48"></NavBarItems>
+      <NavBarItems cls="grow md:grow-0 w-48"></NavBarItems>
     </div>
 </nav>
 

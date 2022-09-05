@@ -1,5 +1,5 @@
 <div class={`${cls} ${hiddenCls} md:block md:w-auto bg-white`} id="mobile-menu">
-    <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-3 md:text-md">
+    <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-6 md:text-md">
       <li>
         <NavBarItem href="#o-nas">O nás</NavBarItem>
       </li>
