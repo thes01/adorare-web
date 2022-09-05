@@ -1,5 +1,5 @@
-<div class={cls}>
-  <div bind:this={player} title={title} style="width: 560px; height: 315px;"/>
+<div class={`${cls} youtube-wrapper`}>
+  <div bind:this={player} title={title}/>
 </div>
 
 <script context="module">

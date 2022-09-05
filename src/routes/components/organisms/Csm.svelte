@@ -1,6 +1,6 @@
 <div class="flex flex-wrap md:flex-nowrap">
     <div class="w-full md:w-1/2">
-        <YouTube cls={`mb-2 relative ${ytbCls} flex`} 
+        <YouTube cls={`mb-2 relative ${ytbCls} flex youtube-normal`} 
                 videoId="jKpT_KpyC-I"
                 title="Adorare - Představení na CSM Hradec Králové"
                 on:play={hideBox}

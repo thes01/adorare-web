@@ -1,6 +1,6 @@
 <div class="flex flex-wrap md:flex-nowrap">
-    <div class="w-full md:w-7/12 lg:w-8/12">
-        <p class="mb-10 md:pr-10">
+    <div class="w-full md:w-7/12 lg:w-8/12 md:pr-10">
+        <p class="mb-10">
             V neděli 5. června 2022 ve Valašských Kloboukách jsme měli čest představit vám naše nejnovější CD autorských písní - <i>K vodám</i>.
             Titulní písní se stala stejnojmenná píseň, která vyšla online jako singl, po boku animovaného klipu <button on:click={() => tab = 'malirem-nebe'} class="underline hover:no-underline">Malířem nebe</button> ze stejného alba.
             <span class="md:hidden">Pod videm</span><span class="hidden md:inline-block">Vpravo</span> také naleznete sadu tématických tapet, které si můžete stáhnout na váš mobil.
@@ -18,7 +18,7 @@
             </TimelineWrapper>
         </div> -->
         
-        <YouTube cls={`w-full relative youtube-${tab}`} videoId={videos[tab]} title="Adorare - Klip"/>
+        <YouTube cls={`w-full relative youtube-${tab} mb-4`} videoId={videos[tab]} title="Adorare - Klip"/>
     </div>
     <div class="md:w-5/12 lg:w-4/12">
         <div hidden={tab != 'k-vodam'}>
