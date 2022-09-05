@@ -22,7 +22,7 @@
     </div>
     <div class="w-full md:w-1/2 md:pl-28
                 mb-8 md:mb-0">
-        <h3 class="leading-none mb-4">Záznamy z celostátního setkání</h3>
+        <h3 class="leading-none mb-4">Záznamy z&nbsp;celostátního setkání</h3>
         <p class="mb-2">Na Youtube si můžete pustit záznamy z programu, který jsme doprovázeli.</p>
         <ul>
             <li><a href="https://youtu.be/U4Cd-Vr4QYM?t=34">Sobotní vigílie</a></li>
