@@ -1,5 +1,5 @@
 <div class="flex flex-wrap md:flex-nowrap">
-    <div class="w-full md:w-1/2">
+    <div class="w-full md:w-1/2 mb-4 md:mb-0">
         <YouTube cls={`mb-2 relative ${ytbCls} flex youtube-normal`} 
                 videoId="jKpT_KpyC-I"
                 title="Adorare - Představení na CSM Hradec Králové"
@@ -8,6 +8,7 @@
         <div class="justify-center relative -top-20
             -right-32 md:-right-20 lg:-right-24 xl:-right-28 2xl:-right-40
             hidden sm:flex">
+            <!-- desktop (with wrapper) -->
             <TimelineWrapper topPx={280} bottomPx={100} cls={hideBoxCls}> 
                 <ColorBox title="CSM Hradec Králové" cls="bg-gray-blue">
                     Děkujeme TV Noe za natočení<br>krátkého klipu o naší skupině. 💙
@@ -22,7 +23,7 @@
     </div>
     <div class="w-full md:w-1/2 md:pl-28
                 mb-8 md:mb-0">
-        <h3 class="leading-none mb-4">Záznamy z&nbsp;celostátního setkání</h3>
+        <h2 class="leading-none mb-4 md:text-5xl">Záznamy z&nbsp;celostátního setkání</h2>
         <p class="mb-2">Na Youtube si můžete pustit záznamy z programu, který jsme doprovázeli.</p>
         <ul>
             <li><a href="https://youtu.be/U4Cd-Vr4QYM?t=34">Sobotní vigílie</a></li>

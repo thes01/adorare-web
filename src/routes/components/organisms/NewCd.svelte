@@ -40,11 +40,8 @@
 
 <script>
     import YouTube from '../../components/atoms/YouTube.svelte';
-
     import GalleryDownload from './GalleryDownload.svelte';
     import GalleryImages from '../../data/GalleryImages';
-    import ColorBox from '../atoms/ColorBox.svelte';
-    import TimelineWrapper from '../molecules/TimelineWrapper.svelte';
 
     let tab = 'poklady'
 
