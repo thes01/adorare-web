@@ -27,7 +27,7 @@
         <p class="mb-2">Ze záznamů TV Noe jsme připravili <a href="https://www.youtube.com/watch?v=r55CuOvJ5WI&list=PLvClrOgp4U7kqP1mU8c2q5bJK7UoO4tIN">playlist
             všech sestříhaných písní</a> z hlavního programu, který jsme doprovázeli.</p>
         <p>Během setkání v našem podání zazněly jak písně z našeho nejnovějšího CD <a href="#nove-cd">K vodám</a>,
-            překlady zahraničních chválových písní a další písně, které jsme zvyklí hrávat během večerů chval.</p>
+            tak překlady zahraničních chválových písní a další písně, které jsme zvyklí hrávat během večerů chval.</p>
     </div>
 </div>
 
