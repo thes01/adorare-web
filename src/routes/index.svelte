@@ -5,6 +5,18 @@
     </header>
     <main class="container mx-auto">
         <div class="w-100">
+
+            {#if Date.now() < Date.parse('2023-01-09T15:00:00+01:00')}
+                <div class="flex justify-center mb-12">
+                    <div class="w-full max-w-[400px]">
+                        <h2 tabindex="-1" id="akce" class="text-center">Tříkrálový koncert</h2>
+                        <a href="https://res.cloudinary.com/adorare/image/upload/v1672861663/KONCERTDB_online_jpkgyl.png" class="glightbox" data-gallery="plakaty">
+                            <img src="https://res.cloudinary.com/adorare/image/upload/c_thumb,w_400,g_face/v1672861663/KONCERTDB_online_jpkgyl.png" alt="Tříkrálový koncert v Dolních Bojanovicích" class="w-full"/>
+                        </a>
+                    </div>
+                </div>
+            {/if}
+
             <h2 tabindex="-1" id="o-nas" class="kanka-1">Něco málo o&nbsp;nás</h2>
             <p class="mb-14">
                 Jsme křesťanská hudební skupina, která má svůj původ v obci Študlov na Valašskoklobucku.
@@ -15,6 +27,7 @@
                 různá setkání mládeže, vedeme večery chval a koncertujeme.
             <p>
             <Csm></Csm>
+
                 
             <h2 tabindex="-1" id="podporte-nas">Budeme rádi za podporu</h2>
             <p class="mb-20">
