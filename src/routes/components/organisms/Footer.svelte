@@ -3,7 +3,7 @@
                 flex-wrap">
         <div class="flex flex-col items-end mb-7
             w-full sm:w-auto">
-            <img src="/adologo.svg" alt="adorare" class="w-40">
+            <img src="/adologo.svg" alt="adorare" class="w-40 mb-1">
             <a class="text-white no-underline hover:underline" href="https://adorare.cz/na-facebooku" target="_blank">/na-facebooku</a>
             <a class="text-white no-underline hover:underline" href="https://adorare.cz/na-instagramu" target="_blank">/na-instagramu</a>
             <a class="text-white no-underline hover:underline" href="https://adorare.cz/na-spotify" target="_blank">/na-spotify</a>
