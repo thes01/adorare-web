@@ -9,18 +9,14 @@
             <button on:click={() => tab = 'k-vodam'} class={`border-2 p-3 ${borders['k-vodam']}`}>K vodám</button>
             <button on:click={() => tab = 'malirem-nebe'} class={`border-2 p-3 ${borders['malirem-nebe']}`}>Malířem nebe</button>
             <button on:click={() => tab = 'poklady'} class={`border-2 p-3 ${borders['poklady']}`}>Poklady</button>
+            <button on:click={() => tab = 'dalsi'} class={`border-2 p-3 ${borders['dalsi']}`}>Další skladby...</button>
         </div>
-        <!-- <div class="flex justify-center relative -top-14 -right-28 -z-10">
-            <TimelineWrapper topPx={280} bottomPx={400} cls={hideBoxCls} right={true}> 
-                <ColorBox title="Poklady" cls="bg-beige">
-                    Máme nový videoklip!
-                </ColorBox>
-            </TimelineWrapper>
-        </div> -->
-        
-        <YouTube cls={`w-full relative youtube-${tab} mb-4`} videoId={videos[tab]} title="Adorare - Klip"/>
+
+        {#if tab != 'dalsi'}
+            <YouTube cls={`w-full relative youtube-${tab} mb-4`} videoId={videos[tab]} title="Adorare - Klip"/>
+        {/if}
     </div>
-    <div class="md:w-5/12 lg:w-4/12">
+    <div class="md:w-5/12 lg:w-4/12 relative">
         <div hidden={tab != 'k-vodam'}>
             <GalleryDownload imgItems={[...GalleryImages.BackgroundsKvodam, ...GalleryImages.BackgroundsOthers]}></GalleryDownload>
         </div>
@@ -29,10 +25,14 @@
             <GalleryDownload imgItems={GalleryImages.BackgroundsZalm}></GalleryDownload>
         </div>
 
-        <div hidden={tab != 'poklady'} class="text-gray-600 italic text-lg">
+        <div hidden={tab != 'poklady'} class="text-gray-600 italic">
             <p class="mb-2">"Neukládejte si poklady na zemi, kde je ničí mol a rez a kde je zloději vykopávají a kradou. Ukládejte si poklady v nebi, kde je neničí mol ani rez a kde je zloději nevykopávají a nekradou. Neboť kde je tvůj poklad, tam bude i tvé srdce."
                 </p>
                 <p>Mt 6,19-21</p>
+        </div>
+
+        <div hidden={tab != 'dalsi'}>
+            <SpotifyEmbed type="k-vodam" height={500}></SpotifyEmbed>
         </div>
     </div>
 </div>
@@ -42,6 +42,7 @@
     import YouTube from '../../components/atoms/YouTube.svelte';
     import GalleryDownload from './GalleryDownload.svelte';
     import GalleryImages from '../../data/GalleryImages';
+    import SpotifyEmbed from '../atoms/SpotifyEmbed.svelte';
 
     let tab = 'poklady'
 
@@ -54,7 +55,8 @@
     $: borders = {
         'k-vodam': tab == 'k-vodam' ? 'border-blue-200' : 'border-gray-200',
         'malirem-nebe': tab == 'malirem-nebe' ? 'border-orange-200': 'border-gray-200',
-        'poklady': tab == 'poklady' ? 'border-blue-400' : 'bordery-gray-200'
+        'poklady': tab == 'poklady' ? 'border-blue-400' : 'bordery-gray-200',
+        'dalsi': tab == 'dalsi' ? 'border-navy-blue' : 'bordery-gray-200'
     }
 
     let hideBoxCls = '';
