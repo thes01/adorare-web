@@ -54,7 +54,7 @@ export default [
         iconTopOffset: -12,
         iconLeftOffset: 26,
         qty: 0,
-        unavailable: 'připravujeme dotisk',
+        price: 100
     },
     {
         id: 'zpevnik_2',
