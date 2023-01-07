@@ -23,7 +23,7 @@
     </div>
     <div class="w-full md:w-1/2 md:pl-28
                 mb-8 md:mb-0">
-        <h2 class="leading-none mb-4 md:text-5xl">Záznamy z&nbsp;celostátního setkání</h2>
+        <h2 class="leading-none mb-4 md:text-5xl">Záznamy z&nbsp;celostátního&nbsp;setkání</h2>
         <p class="mb-2">Ze záznamů TV Noe jsme připravili <a href="https://www.youtube.com/watch?v=r55CuOvJ5WI&list=PLvClrOgp4U7kqP1mU8c2q5bJK7UoO4tIN">playlist
             všech sestříhaných písní</a> z hlavního programu, který jsme doprovázeli.</p>
         <p>Během setkání v našem podání zazněly jak písně z našeho nejnovějšího CD <a href="#nove-cd">K vodám</a>,
