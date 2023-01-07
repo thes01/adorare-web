@@ -6,10 +6,10 @@
             <span class="md:hidden">Pod videm</span><span class="hidden md:inline-block">Vpravo</span> také naleznete sadu tématických tapet, které si můžete stáhnout na váš mobil.
         </p>
         <div class="mb-2 relative">
-            <button on:click={() => tab = 'k-vodam'} class={`border-2 p-3 ${borders['k-vodam']}`}>K vodám</button>
-            <button on:click={() => tab = 'malirem-nebe'} class={`border-2 p-3 ${borders['malirem-nebe']}`}>Malířem nebe</button>
-            <button on:click={() => tab = 'poklady'} class={`border-2 p-3 ${borders['poklady']}`}>Poklady</button>
-            <button on:click={() => tab = 'dalsi'} class={`border-2 p-3 ${borders['dalsi']}`}>Další skladby...</button>
+            <button on:click={() => tab = 'k-vodam'} class={`border-2 p-3 mb-1 ${borders['k-vodam']}`}>K vodám</button>
+            <button on:click={() => tab = 'malirem-nebe'} class={`border-2 p-3 mb-1 ${borders['malirem-nebe']}`}>Malířem nebe</button>
+            <button on:click={() => tab = 'poklady'} class={`border-2 p-3 mb-1 ${borders['poklady']}`}>Poklady</button>
+            <button on:click={() => tab = 'dalsi'} class={`border-2 p-3 mb-1 ${borders['dalsi']}`}>Další skladby...</button>
         </div>
 
         {#if tab != 'dalsi'}
@@ -32,7 +32,7 @@
         </div>
 
         <div hidden={tab != 'dalsi'}>
-            <SpotifyEmbed type="k-vodam" height={500}></SpotifyEmbed>
+            <SpotifyEmbed type="k-vodam" height="500"></SpotifyEmbed>
         </div>
     </div>
 </div>

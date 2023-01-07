@@ -1,10 +1,14 @@
-<span role="button" on:click="{qtyHelper.sub}" class="select-none">-</span>
-<span contenteditable 
-    class="shop-item-input px-1 mx-2 border-none text-right focus:outline-navy-blue"
-    role="textbox"
-    bind:innerHTML="{qtyHelper.qtyStr}"
-    on:keypress="{digitPass}">
-</span>
+<span role={qty > 0 ? 'button' : ''} on:click="{qtyHelper.sub}" class="select-none">-</span>
+{#key animate_toggler}
+    <span contenteditable 
+        class="shop-item-input px-1 mx-2 border-none text-right focus:outline-navy-blue"
+        role="textbox"
+        bind:innerHTML="{qtyHelper.qtyStr}"
+        on:keypress="{digitPass}"
+        in:fly={{ y: animate_y }}>
+    </span>
+{/key}
+
 <!-- for FORM -->
 {#if inputName}
     <input type="hidden" value={qty} name={`orderItem.${inputName}`}>
@@ -15,19 +19,30 @@
 <script lang="ts">
     export let qty: number;
     export let inputName: string|null = null;
+    import { fly } from 'svelte/transition';
+
+    let animate_toggler = false;
+    let animate_y = -20;
 
     $: qtyHelper = {
         get qtyStr() {
             return `${qty}`
         },
         set qtyStr(val: string) {
+            // we don't want to animate when the user is typing
             qty = parseInt(val) || 0
         },
         add() {
             qty += 1;
+            animate_y = -20;
+            animate_toggler = !animate_toggler;
         },
         sub() {
-            qty = Math.max(0, qty - 1);
+            if (qty > 0) {
+                qty -= 1;
+                animate_y = 20;
+                animate_toggler = !animate_toggler;
+            }
         }
     }
 

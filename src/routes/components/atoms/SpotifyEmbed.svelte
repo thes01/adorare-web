@@ -1,7 +1,7 @@
 <iframe
-  style="border-radius:12px"
+  style="border-radius:12px;"
   src={`https://open.spotify.com/embed/${uri_list[type]}`}
-  width="100%"
+  width={width}
   height={height}
   frameBorder="0"
   allowfullscreen
@@ -10,7 +10,8 @@
 />
 
 <script>
-  export let height = 400;
+  export let height = "400px";
+  export let width = "310px";
   export let type = "adorare";
 
   let uri_list = {
