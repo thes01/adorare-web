@@ -4,7 +4,7 @@ import base64 from 'base-64'
 import path from 'path'
 
 async function main() {
-    const subsetStrings = "Tříkrálový koncert Něco málo o nás Budeme rádi za podporu Nové cd - K vodám Adorare shop Cd a zpěvníky K vodám New generation Nech se vést V otázkách Voláme k Tobě 1. Zpěvník 2. Zpěvník Tričko Plátěnka Magnetka"
+    const subsetStrings = "Chvály únor/březen Tříkrálový koncert Něco málo o nás Budeme rádi za podporu Nové cd - K vodám Adorare shop Cd a zpěvníky K vodám New generation Nech se vést V otázkách Voláme k Tobě 1. Zpěvník 2. Zpěvník Tričko Plátěnka Magnetka"
     
     const fontBuffer = fs.readFileSync(path.resolve('static/fonts/RetroSignature.woff2'))
     const subsetBuffer = await subsetFont(fontBuffer, subsetStrings, {
