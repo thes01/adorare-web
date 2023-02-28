@@ -66,10 +66,11 @@
             <div class="xs:w-full md:w-1/2 md:order-last pl-2">
                 <h3>Způsob dopravy a platby</h3>
                 <select bind:value={selectedDeliveryType}
-                    class="block appearance-none border py-1 pr-8 pl-3 mx-3 focus:outline-none focus:bg-white border-navy-blue">
+                    class="block appearance-none border py-1 pr-8 pl-3 mr-3 mb-2 focus:outline-none focus:bg-white border-navy-blue">
                     <option value="ucet">Česká pošta - převodem na účet (+ 60 Kč)</option>
                     <option value="dobirka">Česká pošta - dobírkou (+ 120 Kč)</option>
                 </select>
+                <p>Dodací doba: 5-14 dní</p>
 
                 {#if anyItemsWithProps}
                     <h3>Výběr variant</h3>
