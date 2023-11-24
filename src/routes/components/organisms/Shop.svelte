@@ -67,7 +67,7 @@
                 <h3>Způsob dopravy a platby</h3>
                 <select bind:value={selectedDeliveryType}
                     class="block appearance-none border py-1 pr-8 pl-3 mr-3 mb-2 focus:outline-none focus:bg-white border-navy-blue">
-                    <option value="ucet">Česká pošta - převodem na účet (+ 60 Kč)</option>
+                    <option value="ucet">Česká pošta - převodem na účet (+ 70 Kč)</option>
                     <option value="dobirka">Česká pošta - dobírkou (+ 120 Kč)</option>
                 </select>
                 <p>Dodací doba: 5-14 dní</p>
@@ -126,7 +126,7 @@
     let showOrderDetails = false;
     let selectedDeliveryType = 'ucet';
     const deliveryPrices = {
-        ucet: 60,
+        ucet: 70,
         dobirka: 120
     }
 
