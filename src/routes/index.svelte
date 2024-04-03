@@ -5,18 +5,6 @@
     </header>
     <main class="container mx-auto">
         <div class="w-100">
-
-            {#if Date.now() < Date.parse('2023-03-25T15:00:00+01:00')}
-                <div class="flex justify-center mb-12">
-                    <div class="w-full max-w-[400px]">
-                        <h2 tabindex="-1" id="akce" class="text-center">Chvály únor/březen</h2>
-                        <a href="https://res.cloudinary.com/adorare/image/upload/v1676992715/adorare_chvaly_sbm4ov.jpg" class="glightbox" data-gallery="plakaty">
-                            <img src="https://res.cloudinary.com/adorare/image/upload/c_thumb,w_400,g_face/v1676992715/adorare_chvaly_sbm4ov.jpg" alt="Chvály ve Vlčnově, Vracově a Hluku" class="w-full"/>
-                        </a>
-                    </div>
-                </div>
-            {/if}
-
             <h2 tabindex="-1" id="o-nas" class="kanka-1">Něco málo o&nbsp;nás</h2>
             <p class="mb-14">
                 Jsme křesťanská hudební skupina, která má svůj původ v obci Študlov na Valašskoklobucku.
