@@ -2,9 +2,9 @@
   "name": "adorare-web",
   "version": "0.0.1",
   "scripts": {
-		"dev": "vite dev",
-		"build": "vite build",
-		"preview": "vite preview",
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
     "lint": "prettier --ignore-path .gitignore --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
@@ -12,9 +12,10 @@
     "fonts": "node ./src/helpers/fontSubset.js"
   },
   "devDependencies": {
-    "@sveltejs/adapter-auto": "^2.1.1",
-    "@sveltejs/adapter-node": "^1.3.1",
-    "@sveltejs/kit": "1.30.4",
+    "@sveltejs/adapter-auto": "^3.2.0",
+    "@sveltejs/adapter-node": "^2.1.2",
+    "@sveltejs/kit": "^2.5.5",
+    "@sveltejs/vite-plugin-svelte": "^3.0.2",
     "@typescript-eslint/eslint-plugin": "^7.5.0",
     "@typescript-eslint/parser": "^7.5.0",
     "autoprefixer": "^10.4.19",
@@ -22,7 +23,7 @@
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-svelte": "^2.35.1",
-    "postcss": "^8.4.38", 
+    "postcss": "^8.4.38",
     "postcss-import": "^16.1.0",
     "postcss-nesting": "^12.1.1",
     "postcss-object-fit-images": "^1.1.2",
@@ -36,8 +37,8 @@
     "tailwindcss": "^3.4.3",
     "tslib": "^2.6.2",
     "typescript": "^5.4.3",
-    "vite": "^4.5.3",
-		"vitest": "^1.4.0"
+    "vite": "^5.2.8",
+    "vitest": "^1.4.0"
   },
   "type": "module",
   "dependencies": {

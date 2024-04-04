@@ -16,5 +16,5 @@ export async function load({ params }) {
     const socialId = params.social;
     const redirectUri = map[socialId] ?? "/";
 
-    throw redirect(302, redirectUri);
+    redirect(302, redirectUri);
 }
