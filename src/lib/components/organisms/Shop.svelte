@@ -1,5 +1,6 @@
 <script>
-    import gdocApi from "$lib/helpers/gdocApi";
+    import { enhance } from "$app/forms";
+
     import ShopItem from "../molecules/ShopItem.svelte";
     import Button from "../atoms/Button.svelte";
     import TextField from "../atoms/TextField.svelte";
@@ -10,14 +11,15 @@
     import orderDataDefault from "$lib/data/OrderData";
 
     let showOrderDetails = false;
+    let formSending = false;
     let selectedDeliveryType = "ucet";
     const deliveryPrices = {
         ucet: 70,
         dobirka: 120,
     };
 
-    $: orderItems = orderItemsData;
-    $: orderData = orderDataDefault;
+    let orderData = structuredClone(orderDataDefault);
+    let orderItems = structuredClone(orderItemsData);
 
     // data for configuration of t-shirts', bags' and magnets' variants
     $: propsResults = {
@@ -36,9 +38,29 @@
         .reduce(sum);
     $: deliveryPrice =
         totalPrice === 0 ? 0 : deliveryPrices[selectedDeliveryType];
+
+    function resetForm() {
+        orderData = structuredClone(orderDataDefault);
+        orderItems = structuredClone(orderItemsData);
+        showOrderDetails = false;
+    }
 </script>
 
-<form method="POST" action={gdocApi.GAPP_URL}>
+<form
+    method="POST"
+    on:submit={() => {
+        formSending = true;
+    }}
+    use:enhance={() => {
+        return async ({ result }) => {
+            formSending = false;
+            if (result.type !== "success") {
+                return;
+            }
+            resetForm();
+        };
+    }}
+>
     <div>
         <div class="flex flex-wrap -ml-20">
             <div class="xs:w-full xl:w-2/3 2xl:w-1/2 mb-16">
@@ -101,8 +123,9 @@
                     {#if !showOrderDetails}
                         <Button
                             disabled={totalPrice === 0}
-                            on:click={() => (showOrderDetails = true)}
-                            >Pokračovat v objednávce</Button
+                            on:click={() => {
+                                showOrderDetails = true;
+                            }}>Pokračovat v objednávce</Button
                         >
                     {/if}
                 </div>
@@ -219,10 +242,14 @@
                             bind:value={orderData.recaptcha_response}
                         ></ReCaptchaField>
 
-                        <Button disabled={totalPrice === 0} type="submit"
-                            >Odeslat objednávku v celkové hodnotě {totalPrice +
-                                deliveryPrice} Kč</Button
-                        >
+                        {#if formSending}
+                            <Button disabled={true}>Odesílání...</Button>
+                        {:else}
+                            <Button disabled={totalPrice === 0} type="submit"
+                                >Odeslat objednávku v celkové hodnotě {totalPrice +
+                                    deliveryPrice} Kč</Button
+                            >
+                        {/if}
                     </div>
                 </div>
             </div>
