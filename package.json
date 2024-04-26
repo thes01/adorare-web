@@ -45,6 +45,7 @@
     "@splidejs/svelte-splide": "^0.2.9",
     "flowbite": "^2.3.0",
     "roughjs": "^4.6.6",
+    "svelte-simple-modal": "^1.6.2",
     "vanilla-tilt": "^1.8.1",
     "youtube-player": "^5.6.0"
   }

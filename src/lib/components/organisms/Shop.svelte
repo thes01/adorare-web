@@ -6,6 +6,8 @@
     import TextField from "../atoms/TextField.svelte";
     import ReCaptchaField from "../atoms/ReCaptcha.svelte";
     import ShopItemPropsList from "../molecules/ShopItemPropsList.svelte";
+    import Modal, { bind } from "svelte-simple-modal";
+    import Popup from "../molecules/Popup.svelte";
 
     import orderItemsData from "$lib/data/OrderItems";
     import orderDataDefault from "$lib/data/OrderData";
@@ -44,6 +46,14 @@
         orderItems = structuredClone(orderItemsData);
         showOrderDetails = false;
     }
+
+    function showModal() {
+        const heading = document.querySelector("#objednavka");
+        heading.scrollIntoView();
+        modal = bind(Popup);
+    }
+
+    let modal = null;
 </script>
 
 <form
@@ -58,6 +68,7 @@
                 return;
             }
             resetForm();
+            showModal();
         };
     }}
 >
@@ -256,3 +267,5 @@
         {/if}
     </div>
 </form>
+
+<Modal show={modal}></Modal>
