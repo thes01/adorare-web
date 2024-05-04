@@ -7,7 +7,7 @@
         <p>
             Děkujeme za Vaši objednávku! Na email by Vám mělo přijít automaticky
             vygenerované shrnutí objednávky. Prosíme, očekávejte, že se Vám
-            ještě osobně ozveme s potvrzení odeslání.
+            ještě osobně ozveme pro potvrzení odeslání.
             <br />
             <br />
             V případě problémů nebo dotazů se prosíme ozvěte na náš email
