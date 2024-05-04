@@ -12,6 +12,13 @@
     }
 }
 
+body h1 {
+    font-family: RetroSignature;
+    font-size: 4.5em;
+    line-height: 0.8em;
+    margin-bottom: 0.5em;
+}
+
 body h2, .font-retro {
     font-family: RetroSignature;
     font-size: 4em;

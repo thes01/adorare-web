@@ -54,7 +54,9 @@
         <NewCd></NewCd>
 
         <div class="skvrny-back-1"></div>
-        <h2 tabindex="-1" class="mt-12" id="objednavka">Adorare shop</h2>
+        <h1 tabindex="-1" class="mt-8 text-center" id="objednavka">
+            <span class="bg-white p-6">Adorare shop</span>
+        </h1>
         <Shop></Shop>
         <div class="mt-6 mb-12 mobile-full">
             <Gallery imgItems={GalleryImages.Merch}></Gallery>
