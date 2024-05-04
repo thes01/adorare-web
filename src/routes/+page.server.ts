@@ -1,5 +1,4 @@
-import { error, redirect, type Actions } from '@sveltejs/kit';
-import gdoc from "$lib/helpers/gdocApi";
+import { error, type Actions } from '@sveltejs/kit';
 
 export const actions = {
     default: async ({ request }) => {
@@ -27,7 +26,7 @@ export const actions = {
 
         //  ---------
 
-        const response = await fetch(gdoc.GAPP_URL, {
+        const response = await fetch(import.meta.env.VITE_GAPI_URL, {
             method: 'POST',
             body: data,
         });
