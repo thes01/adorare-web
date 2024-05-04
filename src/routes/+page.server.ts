@@ -10,19 +10,19 @@ export const actions = {
             if (typeof value === 'string') {
                 data.append(name, value);
             } else {
-                redirect(302, '/chyba');
+                error(400, `Received form value of unexpected type (${value}: ${typeof value}).`);
             }
         }
 
         const recaptcha_response = form_data.get('recaptcha-response')?.valueOf();
         if (typeof recaptcha_response !== 'string') {
-            redirect(302, '/chyba');
+            error(400, 'Invalid reCaptcha response.');
         }
 
         const recaptcha_success = await verify_recaptcha(recaptcha_response);
 
         if (recaptcha_success !== true) {
-            redirect(302, '/chyba');
+            error(400, 'Unsuccessful reCaptcha response.');
         }
 
         //  ---------
@@ -35,7 +35,7 @@ export const actions = {
         const response_body = await response.json();
 
         if (response_body.success !== true) {
-            redirect(302, '/chyba');
+            error(400, 'Unsuccessful response from gApi server.');
         }
     },
 } satisfies Actions;

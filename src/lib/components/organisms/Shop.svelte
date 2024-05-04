@@ -47,10 +47,10 @@
         showOrderDetails = false;
     }
 
-    function showModal() {
+    function showModal(success) {
         const heading = document.querySelector("#objednavka");
         heading.scrollIntoView();
-        modal = bind(Popup);
+        modal = bind(Popup, { success });
     }
 
     let modal = null;
@@ -63,12 +63,14 @@
     }}
     use:enhance={() => {
         return async ({ result }) => {
+            console.log(result);
+
             formSending = false;
-            if (result.type !== "success") {
-                return;
+            const is_success = result.type === "success";
+            if (is_success) {
+                resetForm();
             }
-            resetForm();
-            showModal();
+            showModal(is_success);
         };
     }}
 >
