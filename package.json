@@ -1,6 +1,7 @@
 {
   "name": "adorare-web",
   "version": "0.0.1",
+  "packageManager": "pnpm@9.0.6",
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
