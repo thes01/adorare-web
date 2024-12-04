@@ -35,7 +35,7 @@
     $: selected = {
         bag: { Barva: "přírodní" },
         t_shirt: {
-            Velikost: "XS-M",
+            Velikost: "L-XXL",
             Barva: "bílé",
         },
         magnet: {
@@ -58,7 +58,7 @@
             bind:value={selected[label]}
         >
             {#each options as option}
-                <option>{option}</option>
+                <option disabled={option === "XS-M"}>{option}</option>
             {/each}
         </select>
     {/each}
