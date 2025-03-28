@@ -25,7 +25,6 @@ export default [
         iconSrc: '/shop/nech-se-vest.png',
         iconTopOffset: 2,
         qty: 0,
-        unavailable: 'vyprodáno',
     },
     {
         id: 'cd_2',
