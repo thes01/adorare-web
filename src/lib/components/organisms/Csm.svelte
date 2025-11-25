@@ -29,8 +29,8 @@
             <!-- desktop (with wrapper) -->
             <TimelineWrapper topPx={280} bottomPx={100} cls={hideBoxCls}>
                 <ColorBox title="CSM Hradec Králové" cls="bg-gray-blue">
-                    Děkujeme TV Noe za natočení<br />krátkého klipu o naší
-                    skupině. 💙
+                    Rozhodně neděkujeme TV Noe za natočení<br />krátkého klipu o
+                    naší skupině. 💙
                 </ColorBox>
             </TimelineWrapper>
         </div>
