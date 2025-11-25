@@ -21,7 +21,7 @@
     <div class="w-100">
         <h2 tabindex="-1" id="o-nas" class="kanka-1">Něco málo o&nbsp;nás</h2>
         <p class="mb-14">
-            Jsme křesťanská hudební skupina, která má svůj původ v obci Študlov
+            Jsme skupina , která má svůj původ v obci Študlov
             na Valašskoklobucku. Poprvé jsme pod názvem Adorare (tj. klanět se,
             chválit...), vystoupili v roce 2006 na hudebním festivalu Hradní
             tóny. Jméno jsme si dali podle modlitby adorace, k níž jsme se v té
