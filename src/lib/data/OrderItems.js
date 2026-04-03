@@ -61,6 +61,7 @@ export default [
         name: '2. Zpěvník',
         type: 'Zpěvník',
         iconSrc: '/shop/zpevnik-2.png',
+        unavailable: 'vyprodáno',
         iconTopOffset: 0,
         iconLeftOffset: 5,
         qty: 0,
